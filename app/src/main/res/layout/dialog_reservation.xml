@@ -1,16 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_scroll_view"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/num_people"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="How many people?"
-        android:textSize="16sp"
-        android:layout_marginHorizontal="20dp"
-        android:inputType="number" />
+        android:orientation="vertical">
 
-</LinearLayout>
+    <!--    name-->
+        <EditText
+            android:id="@+id/full_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Full name"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <!--    phone number-->
+        <EditText
+            android:id="@+id/phone_number"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Your phone number"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"
+            android:inputType="number"/>
+
+        <!--    phone number-->
+        <EditText
+            android:id="@+id/email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Your email"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp" />
+
+    <!--    how many people drop-down selection-->
+        <TextView
+            android:id="@+id/num_people"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="How many people?"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        />
+
+        <Spinner
+            android:id="@+id/num_people_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp"
+            />
+
+        <!--    date picker selection -->
+        <TextView
+            android:id="@+id/date_picker_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="Pick a date:"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <DatePicker
+            android:id="@+id/date_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:layout_marginLeft="10dp"/>
+
+        <!--    hour drop-down selection-->
+        <TextView
+            android:id="@+id/hour"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="Arrival hour"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/hours_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!--  vegen check -->
+        <TextView
+            android:id="@+id/vegan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="Are you vegan?"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton android:id="@+id/yes_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:layout_marginEnd="10dp"/>
+
+            <RadioButton android:id="@+id/no_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:layout_marginStart="10dp"/>
+
+        </RadioGroup>
+
+        <!--  payment method -->
+        <TextView
+            android:id="@+id/payment"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="Please choose your preferred method of payment:"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton android:id="@+id/cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cash"
+                android:layout_marginEnd="10dp"/>
+
+            <RadioButton android:id="@+id/credit_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credit Card"
+                android:layout_marginStart="10dp"/>
+
+            <RadioButton android:id="@+id/buyme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buyme"
+                android:layout_marginStart="10dp"/>
+
+        </RadioGroup>
+
+<!--        submit and cancel buttons-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_margin="20dp"/>
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:layout_margin="20dp"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

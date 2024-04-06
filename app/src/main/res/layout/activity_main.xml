@@ -41,6 +41,7 @@
             app:layout_constraintStart_toStartOf="@+id/background_image"
             app:layout_constraintWidth_percent=".8" />
 
+<!--        welcome text -->
         <TextView
             android:id="@+id/welcome_text"
             android:layout_width="210dp"
@@ -66,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="24dp"
-            android:text="reserve_seats"
+            android:text="Reserve seats"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="16sp"
