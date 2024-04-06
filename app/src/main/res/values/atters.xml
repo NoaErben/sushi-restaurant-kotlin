@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DishView">
+        <attr name="imageSrc" format="reference" />
+        <attr name="labelText" format="string" />
+        <attr name="labelColor" format="color" />
+        <attr name="descriptionText" format="string" />
+    </declare-styleable>
+</resources>
+

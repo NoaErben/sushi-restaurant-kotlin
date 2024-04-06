@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:adjustViewBounds="true"
+            android:foreground="@drawable/foreground_design"
+            android:src="@drawable/background_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- change language button -->
+        <Button
+            android:id="@+id/change_language"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="140dp"
+            android:background="@drawable/circle_button_background"
+            android:text="HE"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/background_image"
+            app:layout_constraintEnd_toEndOf="@+id/background_image"
+            app:layout_constraintHorizontal_bias="0.017"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintWidth_percent=".8" />
+
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="96dp"
+            android:fontFamily="@font/actor"
+            android:gravity="center"
+            android:text="Welcome to FU - Asian and Sushi bar"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/background_image"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintTop_toTopOf="@+id/background_image" />
+
+
+        <!--        reserve seats button-->
+        <Button
+            android:id="@+id/reserve_seats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:text="reserve_seats"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/background_image"
+            app:layout_constraintEnd_toEndOf="@+id/background_image"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintWidth_percent=".8" />
+
+        <!--    starters-->
+        <TextView
+            android:id="@+id/starters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/amaranth"
+            android:text="Starters"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/background_image"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintTop_toBottomOf="@+id/background_image" />
+
+        <HorizontalScrollView
+            android:id="@+id/hor_scroll_starters"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/starters"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/pani_puri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="Crispy rice flour shells filled with seasoned fish, chili sauce, peanuts, and herbs."
+                    app:imageSrc="@drawable/pani_puri"
+                    app:labelColor="@color/black"
+                    app:labelText="Pani puri" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/meat_bun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="Slow-cooked meat, wasabi-yuzu aioli, iceberg lettuce and cucumber kimchi."
+                    app:imageSrc="@drawable/meat_bun"
+                    app:labelColor="@color/black"
+                    app:labelText="Meat Bun" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/agedashi_tofu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="Hot soy and dashi sauce with crispy tofu, radish, nameko, ginger, sesame, green onions, and nori."
+                    app:imageSrc="@drawable/agedashi_tofu"
+                    app:labelColor="@color/black"
+                    app:labelText="Agedashi Tofu" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/nams"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="Vietnamese Chicken Spring Roll filled with Chicken, veggies, glass noodles, lettuce, chili sauce."
+                    app:imageSrc="@drawable/nams"
+                    app:labelColor="@color/black"
+                    app:labelText="Nams" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!--    main course-->
+        <TextView
+            android:id="@+id/main_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/amaranth"
+            android:text="Main Course"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/hor_scroll_starters"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintTop_toBottomOf="@+id/hor_scroll_starters" />
+
+        <HorizontalScrollView
+            android:id="@+id/hor_scroll_main_course"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/main_course"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/pad_thai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="Rice noodles with chicken,omelet,bean sprouts,green onion,peanuts,and coriander in tamarind sauce."
+                    app:imageSrc="@drawable/pad_thai"
+                    app:labelColor="@color/black"
+                    app:labelText="Pad Thai" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/ramen_soup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="Browned chicken broth,goose confit, ramen noodles, tamago, pak choi, spring onion, and nori seaweed. "
+                    app:imageSrc="@drawable/ramen_soup"
+                    app:labelColor="@color/black"
+                    app:labelText="Ramen Soup" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/rainbow_roll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="Fresh fish, avocado, and cucumber, wrapped in seaweed and rice, topped with vibrant slices of sashimi."
+                    app:imageSrc="@drawable/rainbow_roll"
+                    app:labelColor="@color/black"
+                    app:labelText="Rainbow Roll" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/sechuan_beef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="Flank steak strips with portobello mushrooms, chili,green onion,and caramelized cashews.Served with steamed rice."
+                    app:imageSrc="@drawable/sechuan_beef"
+                    app:labelColor="@color/black"
+                    app:labelText="Sechuan Beef" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- desserts -->
+        <TextView
+            android:id="@+id/dessert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/amaranth"
+            android:text="Desserts"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/hor_scroll_main_course"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintTop_toBottomOf="@+id/hor_scroll_main_course" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/hor_scroll_desserts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/dessert"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/mango_tapioca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="Sweet mango cubes mixed with chewy tapioca pearls in a creamy coconut milk base."
+                    app:imageSrc="@drawable/mango_tapioca"
+                    app:labelColor="@color/black"
+                    app:labelText="Mango Tapioca" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/matcha_ice_cream"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="Creamy green tea-flavored ice cream, perfect for matcha lovers."
+                    app:imageSrc="@drawable/matcha_ice_cream"
+                    app:labelColor="@color/black"
+                    app:labelText="Matcha Ice Cream" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/japanese_garden"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="Matcha parfait,white chocolate,cherry sorbet and matcha sponge."
+                    app:imageSrc="@drawable/japanese_garden"
+                    app:labelColor="@color/black"
+                    app:labelText="Japanese Garden" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/mango_pancake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="Delicate crepes filled with fresh fruit slices and whipped cream."
+                    app:imageSrc="@drawable/mango_pancake"
+                    app:labelColor="@color/black"
+                    app:labelText="Mango Pancake" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- cocktails -->
+        <TextView
+            android:id="@+id/cocktail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/amaranth"
+            android:text="Cocktails"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/hor_scroll_desserts"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintTop_toBottomOf="@+id/hor_scroll_desserts" />
+
+        <HorizontalScrollView
+            android:id="@+id/hor_scroll_cocktails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/cocktail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/martini_lychee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="Vodka infused with lychee essence, served chilled for a refreshing and subtly sweet cocktail experience."
+                    app:imageSrc="@drawable/martini_lychee"
+                    app:labelColor="@color/black"
+                    app:labelText="Martini Lychee" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/matcha_margarita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="Tequila infused with matcha tea, citrus zest, and a salted rim for a refreshing kick."
+                    app:imageSrc="@drawable/matcha_margarita"
+                    app:labelColor="@color/black"
+                    app:labelText="Matcha Margarita" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/sakura_sunset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="infused vodka with citrus and grenadine, garnished with a cherry."
+                    app:imageSrc="@drawable/sakura_sunset"
+                    app:labelColor="@color/black"
+                    app:labelText="Sakura Sunset" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/shochu_flower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="A vibrant purple concoction blending Shochu with elderflower liqueur and soda, served over ice."
+                    app:imageSrc="@drawable/shochu_flower"
+                    app:labelColor="@color/black"
+                    app:labelText="Shochu Flower" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- soft drinks -->
+        <TextView
+            android:id="@+id/soft_drinks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/amaranth"
+            android:text="Soft Drinks"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/hor_scroll_cocktails"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintTop_toBottomOf="@+id/hor_scroll_cocktails" />
+
+        <HorizontalScrollView
+            android:id="@+id/hor_scroll_soft_drinks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/soft_drinks"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/cola"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:imageSrc="@drawable/cola"
+                    app:labelColor="@color/black"
+                    app:labelText="Cola" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/sprite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:imageSrc="@drawable/sprite"
+                    app:labelColor="@color/black"
+                    app:labelText="Sprite" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/mineral_water"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:imageSrc="@drawable/water"
+                    app:labelColor="@color/black"
+                    app:labelText="Mineral Water" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/fuze_tea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:imageSrc="@drawable/fuze_tea"
+                    app:labelColor="@color/black"
+                    app:labelText="Fuze Tea" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
