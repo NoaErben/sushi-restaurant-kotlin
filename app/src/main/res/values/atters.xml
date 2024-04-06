@@ -5,6 +5,8 @@
         <attr name="labelText" format="string" />
         <attr name="labelColor" format="color" />
         <attr name="descriptionText" format="string" />
+        <attr name="price" format="string" />
+        <attr name="priceColor" format="color" />
     </declare-styleable>
 </resources>
 

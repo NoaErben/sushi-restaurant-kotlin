@@ -69,7 +69,7 @@
             android:layout_marginBottom="24dp"
             android:text="Reserve seats"
             android:textAllCaps="false"
-            android:textColor="@android:color/white"
+            android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/background_image"
             app:layout_constraintEnd_toEndOf="@+id/background_image"
@@ -113,7 +113,8 @@
                     app:descriptionText="Crispy rice flour shells filled with seasoned fish, chili sauce, peanuts, and herbs."
                     app:imageSrc="@drawable/pani_puri"
                     app:labelColor="@color/black"
-                    app:labelText="Pani puri" />
+                    app:labelText="Pani puri"
+                    app:price = "47₪" />
 
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/meat_bun"
@@ -122,7 +123,9 @@
                     app:descriptionText="Slow-cooked meat, wasabi-yuzu aioli, iceberg lettuce and cucumber kimchi."
                     app:imageSrc="@drawable/meat_bun"
                     app:labelColor="@color/black"
-                    app:labelText="Meat Bun" />
+                    app:labelText="Meat Bun"
+                    app:price = "50₪" />
+                />
 
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/agedashi_tofu"
@@ -131,7 +134,8 @@
                     app:descriptionText="Hot soy and dashi sauce with crispy tofu, radish, nameko, ginger, sesame, green onions, and nori."
                     app:imageSrc="@drawable/agedashi_tofu"
                     app:labelColor="@color/black"
-                    app:labelText="Agedashi Tofu" />
+                    app:labelText="Agedashi Tofu"
+                    app:price = "52₪" />
 
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/nams"
@@ -140,7 +144,8 @@
                     app:descriptionText="Vietnamese Chicken Spring Roll filled with Chicken, veggies, glass noodles, lettuce, chili sauce."
                     app:imageSrc="@drawable/nams"
                     app:labelColor="@color/black"
-                    app:labelText="Nams" />
+                    app:labelText="Nams"
+                    app:price = "48₪"/>
             </LinearLayout>
         </HorizontalScrollView>
 
@@ -181,7 +186,8 @@
                     app:descriptionText="Rice noodles with chicken,omelet,bean sprouts,green onion,peanuts,and coriander in tamarind sauce."
                     app:imageSrc="@drawable/pad_thai"
                     app:labelColor="@color/black"
-                    app:labelText="Pad Thai" />
+                    app:labelText="Pad Thai"
+                    app:price = "70₪"/>
 
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/ramen_soup"
@@ -190,7 +196,8 @@
                     app:descriptionText="Browned chicken broth,goose confit, ramen noodles, tamago, pak choi, spring onion, and nori seaweed. "
                     app:imageSrc="@drawable/ramen_soup"
                     app:labelColor="@color/black"
-                    app:labelText="Ramen Soup" />
+                    app:labelText="Ramen Soup"
+                    app:price = "68₪"/>
 
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/rainbow_roll"
@@ -199,7 +206,8 @@
                     app:descriptionText="Fresh fish, avocado, and cucumber, wrapped in seaweed and rice, topped with vibrant slices of sashimi."
                     app:imageSrc="@drawable/rainbow_roll"
                     app:labelColor="@color/black"
-                    app:labelText="Rainbow Roll" />
+                    app:labelText="Rainbow Roll"
+                    app:price = "62₪" />
 
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/sechuan_beef"
@@ -208,7 +216,8 @@
                     app:descriptionText="Flank steak strips with portobello mushrooms, chili,green onion,and caramelized cashews.Served with steamed rice."
                     app:imageSrc="@drawable/sechuan_beef"
                     app:labelColor="@color/black"
-                    app:labelText="Sechuan Beef" />
+                    app:labelText="Sechuan Beef"
+                    app:price = "71₪" />
             </LinearLayout>
         </HorizontalScrollView>
 
@@ -226,7 +235,8 @@
             app:layout_constraintEnd_toEndOf="@+id/hor_scroll_main_course"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/background_image"
-            app:layout_constraintTop_toBottomOf="@+id/hor_scroll_main_course" />
+            app:layout_constraintTop_toBottomOf="@+id/hor_scroll_main_course"
+            />
 
 
         <HorizontalScrollView
@@ -250,7 +260,8 @@
                     app:descriptionText="Sweet mango cubes mixed with chewy tapioca pearls in a creamy coconut milk base."
                     app:imageSrc="@drawable/mango_tapioca"
                     app:labelColor="@color/black"
-                    app:labelText="Mango Tapioca" />
+                    app:labelText="Mango Tapioca"
+                    app:price = "45₪" />/>
 
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/matcha_ice_cream"
@@ -259,7 +270,8 @@
                     app:descriptionText="Creamy green tea-flavored ice cream, perfect for matcha lovers."
                     app:imageSrc="@drawable/matcha_ice_cream"
                     app:labelColor="@color/black"
-                    app:labelText="Matcha Ice Cream" />
+                    app:labelText="Matcha Ice Cream"
+                    app:price = "30₪" />/>
 
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/japanese_garden"
@@ -268,7 +280,8 @@
                     app:descriptionText="Matcha parfait,white chocolate,cherry sorbet and matcha sponge."
                     app:imageSrc="@drawable/japanese_garden"
                     app:labelColor="@color/black"
-                    app:labelText="Japanese Garden" />
+                    app:labelText="Japanese Garden"
+                    app:price = "48₪" />/>
 
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/mango_pancake"
@@ -277,7 +290,8 @@
                     app:descriptionText="Delicate crepes filled with fresh fruit slices and whipped cream."
                     app:imageSrc="@drawable/mango_pancake"
                     app:labelColor="@color/black"
-                    app:labelText="Mango Pancake" />
+                    app:labelText="Mango Pancake"
+                    app:price = "38₪" />/>
             </LinearLayout>
         </HorizontalScrollView>
 
@@ -318,7 +332,8 @@
                     app:descriptionText="Vodka infused with lychee essence, served chilled for a refreshing and subtly sweet cocktail experience."
                     app:imageSrc="@drawable/martini_lychee"
                     app:labelColor="@color/black"
-                    app:labelText="Martini Lychee" />
+                    app:labelText="Martini Lychee"
+                    app:price = "54₪" />/>
 
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/matcha_margarita"
@@ -327,7 +342,8 @@
                     app:descriptionText="Tequila infused with matcha tea, citrus zest, and a salted rim for a refreshing kick."
                     app:imageSrc="@drawable/matcha_margarita"
                     app:labelColor="@color/black"
-                    app:labelText="Matcha Margarita" />
+                    app:labelText="Matcha Margarita"
+                    app:price = "48₪" />/>
 
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/sakura_sunset"
@@ -336,7 +352,8 @@
                     app:descriptionText="infused vodka with citrus and grenadine, garnished with a cherry."
                     app:imageSrc="@drawable/sakura_sunset"
                     app:labelColor="@color/black"
-                    app:labelText="Sakura Sunset" />
+                    app:labelText="Sakura Sunset"
+                    app:price = "52₪" />/>
 
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/shochu_flower"
@@ -345,7 +362,8 @@
                     app:descriptionText="A vibrant purple concoction blending Shochu with elderflower liqueur and soda, served over ice."
                     app:imageSrc="@drawable/shochu_flower"
                     app:labelColor="@color/black"
-                    app:labelText="Shochu Flower" />
+                    app:labelText="Shochu Flower"
+                    app:price = "54₪" />/>
             </LinearLayout>
         </HorizontalScrollView>
 
@@ -385,7 +403,8 @@
                     android:layout_height="wrap_content"
                     app:imageSrc="@drawable/cola"
                     app:labelColor="@color/black"
-                    app:labelText="Cola" />
+                    app:labelText="Cola"
+                    app:price = "13₪" />/>
 
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/sprite"
@@ -393,7 +412,8 @@
                     android:layout_height="wrap_content"
                     app:imageSrc="@drawable/sprite"
                     app:labelColor="@color/black"
-                    app:labelText="Sprite" />
+                    app:labelText="Sprite"
+                    app:price = "12₪" />/>
 
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/mineral_water"
@@ -401,7 +421,8 @@
                     android:layout_height="wrap_content"
                     app:imageSrc="@drawable/water"
                     app:labelColor="@color/black"
-                    app:labelText="Mineral Water" />
+                    app:labelText="Mineral Water"
+                    app:price = "11₪" />/>
 
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/fuze_tea"
@@ -409,7 +430,8 @@
                     android:layout_height="wrap_content"
                     app:imageSrc="@drawable/fuze_tea"
                     app:labelColor="@color/black"
-                    app:labelText="Fuze Tea" />
+                    app:labelText="Fuze Tea"
+                    app:price = "13₪" />/>
             </LinearLayout>
         </HorizontalScrollView>
 
