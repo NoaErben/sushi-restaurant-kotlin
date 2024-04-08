@@ -24,13 +24,25 @@
             android:textColor="@color/black"
             android:textSize="30sp" />
 
-        <ImageView
-            android:id="@+id/sushi_image"
+<!--        <ImageView-->
+<!--            android:id="@+id/sushi_image"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="150dp"-->
+<!--            android:layout_marginLeft="130dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:src="@drawable/sushi_logo" />-->
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyle"
+            android:indeterminateDrawable="@drawable/rotating_icon"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginLeft="130dp"
+            android:layout_marginStart="130dp"
             android:layout_marginTop="30dp"
-            android:src="@drawable/sushi_logo" />
+            android:layout_marginEnd="36dp"
+            />
+
 
         <TextView
             android:id="@+id/please_wait"
@@ -43,12 +55,6 @@
             android:textColor="@color/black"
             android:textSize="30sp" />
 
-        <!--        <ProgressBar-->
-        <!--            android:id="@+id/progress_bar"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginEnd="36dp"-->
-        <!--             />-->
 
     </LinearLayout>
 
