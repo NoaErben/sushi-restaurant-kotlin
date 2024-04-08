@@ -2,20 +2,13 @@ package com.example.sushirestaurant
 
 import android.app.Dialog
 import android.content.Intent
-import android.graphics.Typeface
 import android.os.Bundle
-import android.text.Spannable
-import android.text.SpannableString
-import android.text.style.StyleSpan
 import android.widget.ArrayAdapter
 import android.widget.DatePicker
-import android.widget.RadioButton
 import android.widget.Spinner
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import android.widget.EditText
-import android.widget.RadioGroup
-import android.util.Log
 import android.widget.Button
 
 
@@ -76,7 +69,7 @@ class ReservationDialogFragment : DialogFragment() {
                 .setPositiveButton("OK") { dialog, _ ->
                     dialog.dismiss()
                     // Navigate back to the main activity (MainActivity)
-                    val intent = Intent(requireContext(), MainActivity::class.java)
+                    val intent = Intent(requireContext(), MainActivity2::class.java)
                     startActivity(intent)
                 }
                 .show()

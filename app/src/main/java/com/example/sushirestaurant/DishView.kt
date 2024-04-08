@@ -68,4 +68,3 @@ class DishView @JvmOverloads constructor(
         labelText.text = text
     }
 }
-
