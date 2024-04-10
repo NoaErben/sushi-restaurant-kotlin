@@ -49,7 +49,7 @@
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/actor"
                 android:gravity="center"
-                android:text="@string/welcome_to_fu_asian_and_sushi_bar"
+                android:text="@string/welcome_to_sakura_asian_and_sushi_bar"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
 

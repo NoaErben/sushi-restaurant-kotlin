@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="true">מסעדת סושי</string>
-    <string name="welcome_to_fu_asian_and_sushi_bar">ברוכים הבאים לפו - מסעדת סושי אסיאתית</string>
+    <string name="welcome_to_sakura_asian_and_sushi_bar">ברוכים הבאים לסאקורה - מסעדת סושי אסיאתית</string>
     <string name="reserve_seats">הזמינו שולחן</string>
     <string name="starters">ראשונות</string>
     <string name="main_course">עיקריות</string>
