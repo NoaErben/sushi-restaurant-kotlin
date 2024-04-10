@@ -17,7 +17,7 @@
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginHorizontal="20dp"
-            android:hint="Full name"
+            android:hint="@string/full_name"
             android:textSize="16sp"
             android:layout_marginBottom="5dp"
             />
@@ -29,7 +29,7 @@
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginHorizontal="20dp"
-            android:hint="Your phone number"
+            android:hint="@string/your_phone_number"
             android:textSize="16sp"
             android:layout_marginBottom="5dp"
             android:inputType="number"/>
@@ -41,7 +41,7 @@
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginHorizontal="20dp"
-            android:hint="Your email"
+            android:hint="@string/your_email"
             android:textSize="16sp"
             android:layout_marginBottom="5dp" />
 
@@ -52,7 +52,7 @@
             android:layout_width="209dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:text="How many people?"
+            android:text="@string/how_many_people"
             android:textSize="16sp"
             android:textStyle="bold" />
         />
@@ -72,7 +72,7 @@
             android:layout_width="209dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:text="Pick a date:"
+            android:text="@string/pick_a_date"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -92,7 +92,7 @@
             android:layout_width="209dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:text="Arrival hour"
+            android:text="@string/arrival_hour"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -110,7 +110,7 @@
             android:layout_width="209dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:text="Are you vegan?"
+            android:text="@string/are_you_vegan"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -124,13 +124,13 @@
             <RadioButton android:id="@+id/yes_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yes"
+                android:text="@string/yes"
                 android:layout_marginEnd="10dp"/>
 
             <RadioButton android:id="@+id/no_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No"
+                android:text="@string/no"
                 android:layout_marginStart="10dp"/>
 
         </RadioGroup>
@@ -142,7 +142,7 @@
             android:layout_width="209dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:text="Please choose your preferred method of payment:"
+            android:text="@string/please_choose_your_preferred_method_of_payment"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -156,19 +156,19 @@
             <RadioButton android:id="@+id/cash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cash"
+                android:text="@string/cash"
                 android:layout_marginEnd="10dp"/>
 
             <RadioButton android:id="@+id/credit_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Credit Card"
+                android:text="@string/credit_card"
                 android:layout_marginStart="10dp"/>
 
             <RadioButton android:id="@+id/buyme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Buyme"
+                android:text="@string/buyme"
                 android:layout_marginStart="10dp"/>
 
         </RadioGroup>
@@ -184,14 +184,14 @@
                 android:id="@+id/cancel_button"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Cancel"
+                android:text="@string/cancel"
                 android:layout_margin="20dp"/>
 
             <Button
                 android:id="@+id/submit_button"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:layout_margin="20dp"/>
 
 

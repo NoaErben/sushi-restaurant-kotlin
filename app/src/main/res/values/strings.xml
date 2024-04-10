@@ -1,5 +1,68 @@
 <resources>
-    <string name="app_name">SushiRestaurant</string>
+    <string name="app_name" translatable="true">SushiRestaurant</string>
+    <string name="welcome_to_fu_asian_and_sushi_bar">Welcome to FU - Asian and Sushi bar</string>
+    <string name="reserve_seats">Reserve seats</string>
+    <string name="starters">Starters</string>
+    <string name="main_course">Main Course</string>
+    <string name="he">HE</string>
+    <string name="en">EN</string>
+    <string name="pani_puri_label">Pani puri</string>
+    <string name="pani_puri_description">Crispy rice flour shells filled with seasoned fish, chili sauce, peanuts, and herbs.</string>
+    <string name="meat_bun_description">Slow-cooked meat, wasabi-yuzu aioli, iceberg lettuce and cucumber kimchi.</string>
+    <string name="meat_bun_label">meat bun</string>
+    <string name="agedashi_tofu_description">Hot soy and dashi sauce with crispy tofu, radish, nameko, ginger, sesame, green onions, and nori.</string>
+    <string name="agedashi_tofu_label">Agedashi Tofu</string>
+    <string name="nams_description">Vietnamese Chicken Spring Roll filled with Chicken, veggies, glass noodles, lettuce, chili sauce.</string>
+    <string name="nams_label">Nams</string>
+    <string name="pad_tai_description">Rice noodles with chicken,omelet,bean sprouts,green onion,peanuts,and coriander in tamarind sauce.</string>
+    <string name="pad_thai_label">Pad Thai</string>
+    <string name="ramen_soup_description">Browned chicken broth,goose confit, ramen noodles, tamago, pak choi, spring onion, and nori seaweed.</string>
+    <string name="ramen_soup_label">Ramen Soup</string>
+    <string name="rainbow_roll_description">Fresh fish, avocado, and cucumber, wrapped in seaweed and rice, topped with vibrant slices of sashimi.</string>
+    <string name="rainbow_roll_label">Rainbow Roll</string>
+    <string name="sechuan_beef_description">Flank steak strips with portobello mushrooms, chili,green onion,and caramelized cashews.Served with steamed rice.</string>
+    <string name="sechuan_beef_label">Sechuan Beef</string>
+    <string name="desserts">Desserts</string>
+    <string name="mango_tapioca_description">Sweet mango cubes mixed with chewy tapioca pearls in a creamy coconut milk base.</string>
+    <string name="mango_tapioca_label">Mango Tapioca</string>
+    <string name="matcha_ice_cream_description">Creamy green tea-flavored ice cream, perfect for matcha lovers.</string>
+    <string name="matcha_ice_cream_label">Matcha Ice Cream</string>
+    <string name="japanese_garden_description">Matcha parfait,white chocolate,cherry sorbet and matcha sponge.</string>
+    <string name="japanese_garden_label">Japanese Garden</string>
+    <string name="fruit_pancakes_description">Delicate crepes filled with fresh fruit slices and whipped cream.</string>
+    <string name="fruit_pancakes_label">Fruit pancakes</string>
+    <string name="cocktails">Cocktails</string>
+    <string name="martini_lychee_description">Vodka infused with lychee essence and lemon juice.</string>
+    <string name="martini_lychee_label">Martini Lychee</string>
+    <string name="matcha_margarita_description">Tequila infused with matcha tea, citrus zest, and a salted rim for a refreshing kick.</string>
+    <string name="matcha_margarita_label">Matcha Margarita</string>
+    <string name="sakura_sunset_description">Infused vodka with citrus and grenadine, garnished with a cherry.</string>
+    <string name="sakura_sunset_label">Sakura Sunset</string>
+    <string name="shochu_flower_descripton">A vibrant purple concoction blending Shochu with elderflower liqueur and soda, served over ice.</string>
+    <string name="shochu_flower_label">Shochu Flower</string>
+    <string name="soft_drinks">Soft Drinks</string>
+    <string name="cola_label_text">Cola</string>
+    <string name="sprite_label_text">Sprite</string>
+    <string name="mineral_water_label_text">Mineral Water</string>
+    <string name="fuze_tea_label_text">Fuze Tea</string>
+    <string name="full_name">Full name</string>
+    <string name="your_phone_number">Your phone number</string>
+    <string name="your_email">Your email</string>
+    <string name="how_many_people">How many people?</string>
+    <string name="pick_a_date">Pick a date:</string>
+    <string name="arrival_hour">Arrival hour</string>
+    <string name="are_you_vegan">Are you vegan?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="please_choose_your_preferred_method_of_payment">Please choose your preferred method of payment:</string>
+    <string name="cash">Cash</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="buyme">Buyme</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="reservation_title">Reservation</string>
+
+
     <string-array name="num_people_array">
         <item>1</item>
         <item>2</item>

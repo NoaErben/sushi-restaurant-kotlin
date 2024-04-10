@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="true">מסעדת סושי</string>
+    <string name="welcome_to_fu_asian_and_sushi_bar">ברוכים הבאים לפו - מסעדת סושי אסיאתית</string>
+    <string name="reserve_seats">הזמינו שולחן</string>
+    <string name="starters">ראשונות</string>
+    <string name="main_course">עיקריות</string>
+    <string name="he">EN</string>
+    <string name="en">HE</string>
+    <string name="pani_puri_label">פאני פורי</string>
+    <string name="pani_puri_description">מעטפת בצק פריכה במילוי דג מתובל, צ׳ילי, בוטנים וירקות.</string>
+    <string name="meat_bun_label">מיט באן</string>
+    <string name="meat_bun_description">בשר בקר בבישול ארוך, איולי-יוזו ווסאבי, חסה אייסברג ומלפפון קימצ׳י.</string>
+    <string name="agedashi_tofu_description">קוביות טופו פריכות מלוות ברוטב חם על בסיס סויה ודאשי עם צנון, נמקו, ג׳ינג׳ר, שומשום, בצל ירוק ואצת נורי.</string>
+    <string name="agedashi_tofu_label">אגדשי טופו</string>
+    <string name="nams_description">ספרינג רול ויאטנמי במילוי עוף, ירקות ואטריות זכוכית. חסה אייסברג וצ׳ילי.</string>
+    <string name="nams_label">נאמס</string>
+    <string name="pad_tai_description">אטריות אורז עם  עוף , חביתה, נבטים, בצל ירוק, כרוב לבן,
+בוטנים וכוסברה ברוטב תמרינדי.</string>
+    <string name="pad_thai_label">פאד תאי</string>
+    <string name="ramen_soup_description">ציר עוף מושחם, אווז קונפי, אטריות ראמן טריות, טמאגו, פאק צ׳וי, בצל ירוק ואצות נורי.</string>
+    <string name="ramen_soup_label">מרק ראמן</string>
+    <string name="rainbow_roll_description">דג טרי, אבוקדו וגזר ירוק, עטופים באצה ואורז, מעוטרים בפרוסות צבעוניות של סאשימי.</string>
+    <string name="rainbow_roll_label">ריינבו רול</string>
+    <string name="sechuan_beef_description"> נתחי סטייק, פטריות פורטובלו, צ׳ילי אדום , בצל ירוק וקשיו מקורמל.
+ברוטב סויה, אויסטר, תמרינדי, שום וג׳ינג׳ר. מוגש עם אורז מאודה.</string>
+    <string name="sechuan_beef_label">ביף סצ׳ואן</string>
+    <string name="desserts">קינוחים</string>
+    <string name="mango_tapioca_description">קוביות מנגו מתוקות מעורבבות עם פנקי טפיוקה, על בסיס של חלב קוקוס קרמי.</string>
+    <string name="mango_tapioca_label">טפיוקה מנגו</string>
+    <string name="matcha_ice_cream_description">גלידה קרמית בטעם מאצ׳ה (תה ירוק יפני) , מושלם לחובבי מאצ׳ה !</string>
+    <string name="matcha_ice_cream_label">גלידת מאצ׳ה</string>
+    <string name="japanese_garden_description"> פרפה מאצ׳ה, שוקולד לבן, סורבה דובדבנים ועוגת ספוג מאצ׳ה.</string>
+    <string name="japanese_garden_label">גן עדן יפני</string>
+    <string name="fruit_pancakes_description">פנקייקים יפניים ממולאים בפירות טריים וקצפת.</string>
+    <string name="fruit_pancakes_label">פנקייק פירות</string>
+    <string name="cocktails">קוקטיילים</string>
+    <string name="martini_lychee_description">וודקה בניחוח ליצ׳י, מיץ לימון.</string>
+    <string name="martini_lychee_label">מרטיני ליצ׳י</string>
+    <string name="matcha_margarita_description">טקילה, ארומת תה מאצ׳ה, ניחוח הדרים, מעוטר במלח.</string>
+    <string name="matcha_margarita_label">מאצ׳ה מרגריטה</string>
+    <string name="sakura_sunset_description">וודקה, פירות הדר, רימונים, בקישוט דובדבן.</string>
+    <string name="sakura_sunset_label">שקיעת הדובדבן</string>
+    <string name="shochu_flower_descripton">משקה יפני טרופי על בסיס שוצ׳ו יפני מסורתי עם ליקר פרחי אלדר וסודה.</string>
+    <string name="shochu_flower_label">פרח השוצ׳ו</string>
+    <string name="soft_drinks">שתייה קלה</string>
+    <string name="cola_label_text">קולה</string>
+    <string name="sprite_label_text">ספרייט</string>
+    <string name="mineral_water_label_text">מים מינרליים</string>
+    <string name="fuze_tea_label_text">פיוז טי</string>
+    <string name="full_name">שם מלא</string>
+    <string name="your_phone_number">מספר טלפון</string>
+    <string name="your_email">כתובת אימייל</string>
+    <string name="how_many_people">כמה אנשים תהיו?</string>
+    <string name="pick_a_date">בחר תאריך:</string>
+    <string name="arrival_hour">שעת הגעה רצויה:</string>
+    <string name="are_you_vegan">האם את/ה טבעוני/ת?</string>
+    <string name="yes">כן</string>
+    <string name="no">לא</string>
+    <string name="please_choose_your_preferred_method_of_payment">בחר את אופן התשלום:</string>
+    <string name="cash">מזומן</string>
+    <string name="credit_card">כרטיס אשראי</string>
+    <string name="buyme">Buyme</string>
+    <string name="cancel">ביטול</string>
+    <string name="submit">אישור</string>
+    <string name="reservation_title">הזמנת שולחן</string>
+
+
+
+
+
+</resources>

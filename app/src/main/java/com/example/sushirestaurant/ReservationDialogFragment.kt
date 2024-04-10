@@ -41,7 +41,7 @@ class ReservationDialogFragment : DialogFragment() {
         val datePicker = view.findViewById<DatePicker>(R.id.date_picker)
 
         val alertDialogBuilder = AlertDialog.Builder(requireContext())
-            .setTitle("Reservation")
+            .setTitle(getString(R.string.reservation_title))
             .setView(view)
 
 // Retrieve data from views and show the dialog when the submit button is clicked
