@@ -23,41 +23,44 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- change language button -->
-        <Button
-            android:id="@+id/change_language"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginBottom="140dp"
-            android:background="@drawable/circle_button_background"
-            android:text="@string/he"
-            android:textColor="@android:color/white"
-            android:textSize="13sp"
-            android:padding="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/background_image"
-            app:layout_constraintEnd_toEndOf="@+id/background_image"
-            app:layout_constraintHorizontal_bias="0.017"
-            app:layout_constraintStart_toStartOf="@+id/background_image"
-            app:layout_constraintWidth_percent=".8" />
-
 <!--        welcome text -->
-        <TextView
-            android:id="@+id/welcome_text"
-            android:layout_width="210dp"
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_margin="25dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="96dp"
-            android:fontFamily="@font/actor"
-            android:gravity="center"
-            android:text="@string/welcome_to_fu_asian_and_sushi_bar"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="@+id/background_image"
             app:layout_constraintStart_toStartOf="@+id/background_image"
-            app:layout_constraintTop_toTopOf="@+id/background_image" />
+            app:layout_constraintTop_toTopOf="@+id/background_image"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"/>
+
+            <TextView
+                android:id="@+id/welcome_text"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="96dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/actor"
+                android:gravity="center"
+                android:text="@string/welcome_to_fu_asian_and_sushi_bar"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"/>
+
+
+        </LinearLayout>
+
 
 
         <!--        reserve seats button-->
