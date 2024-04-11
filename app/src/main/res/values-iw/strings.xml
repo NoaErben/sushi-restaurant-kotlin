@@ -48,9 +48,9 @@
     <string name="sprite_label_text">ספרייט</string>
     <string name="mineral_water_label_text">מים מינרליים</string>
     <string name="fuze_tea_label_text">פיוז טי</string>
-    <string name="full_name">שם מלא</string>
-    <string name="your_phone_number">מספר טלפון</string>
-    <string name="your_email">כתובת אימייל</string>
+    <string name="full_name">שם מלא (חובה)</string>
+    <string name="your_phone_number">מספר טלפון (חובה)</string>
+    <string name="your_email">כתובת אימייל (חובה)</string>
     <string name="how_many_people">כמה אנשים תהיו?</string>
     <string name="pick_a_date">בחר תאריך:</string>
     <string name="arrival_hour">שעת הגעה רצויה:</string>
@@ -64,6 +64,16 @@
     <string name="cancel">ביטול</string>
     <string name="submit">אישור</string>
     <string name="reservation_title">הזמנת שולחן</string>
+    <string name="error">שגיאה</string>
+    <string name="error_message">מלא בבקשה את כל פרטי החובה</string>
+    <string name="reservation_deatils_title">פרטי ההזמנה</string>
+    <string name="full_name_label">שם מלא:</string>
+    <string name="phone_number_label">מספר טלפון:</string>
+    <string name="email_label">מייל:</string>
+    <string name="num_people_label">מספר אנשים:</string>
+    <string name="selected_hour_label">שעת הגעה:</string>
+    <string name="date_label">תאריך:</string>
+    <string name="ok_button_label">אישור</string>
 
 
 

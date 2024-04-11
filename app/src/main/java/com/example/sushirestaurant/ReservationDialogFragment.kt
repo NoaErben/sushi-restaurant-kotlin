@@ -44,7 +44,9 @@ class ReservationDialogFragment : DialogFragment() {
             .setTitle(getString(R.string.reservation_title))
             .setView(view)
 
-// Retrieve data from views and show the dialog when the submit button is clicked
+        // Retrieve data from views and show the dialog when the submit button is clicked
+        val alertDialog = alertDialogBuilder.create()
+
         view.findViewById<Button>(R.id.submit_button)?.setOnClickListener {
             // Retrieve data from views
             val fullName = view.findViewById<EditText>(R.id.full_name).text.toString()
@@ -56,37 +58,53 @@ class ReservationDialogFragment : DialogFragment() {
             val month = datePicker.month
             val year = datePicker.year
 
-            // Display reservation details in an AlertDialog
-            val message = "Full Name: $fullName\n" +
-                    "Phone Number: $phoneNumber\n" +
-                    "Email: $email\n" +
-                    "Number of People: $numPeople\n" +
-                    "Selected Hour: $selectedHour\n" +
-                    "Date: $dayOfMonth/$month/$year"
-            AlertDialog.Builder(requireContext())
-                .setTitle("Reservation Details")
-                .setMessage(message)
-                .setPositiveButton("OK") { dialog, _ ->
-                    dialog.dismiss()
-                    // Navigate back to the main activity (MainActivity)
-                    val intent = Intent(requireContext(), MainActivity2::class.java)
-                    startActivity(intent)
-                }
-                .show()
+            // save the labels of the reservation details
+            val fullNameLabel = getString(R.string.full_name_label)
+            val phoneNumberLabel = getString(R.string.phone_number_label)
+            val emailLabel = getString(R.string.email_label)
+            val numPeopleLabel = getString(R.string.num_people_label)
+            val selectedHourLabel = getString(R.string.selected_hour_label)
+            val dateLabel = getString(R.string.date_label)
+
+            val okButtonLabel =  getString(R.string.ok_button_label)
+
+
+            if (fullName.isEmpty() || phoneNumber.isEmpty() || email.isEmpty()) {
+                // Display error message if any required field is empty
+                AlertDialog.Builder(requireContext())
+                    .setTitle((getString(R.string.error)))
+                    .setMessage(getString(R.string.error_message))
+                    .setPositiveButton(okButtonLabel, null)
+                    .show()
+            } else {
+                // Proceed with displaying reservation details if all required fields are filled
+                val message = "$fullNameLabel $fullName\n" +
+                        "$phoneNumberLabel $phoneNumber\n" +
+                        "$emailLabel $email\n" +
+                        "$numPeopleLabel $numPeople\n" +
+                        "$selectedHourLabel $selectedHour\n" +
+                        "$dateLabel $dayOfMonth/$month/$year"
+                AlertDialog.Builder(requireContext())
+                    .setTitle(getString(R.string.reservation_deatils_title))
+                    .setMessage(message)
+                    .setPositiveButton(okButtonLabel) { dialog, _ ->
+                        dialog.dismiss()
+                        // Navigate back to the main activity (MainActivity)
+                        val intent = Intent(requireContext(), MainActivity2::class.java)
+                        startActivity(intent)
+                    }
+                    .show()
+
+            }
         }
 
         // Handle cancel button click
         view.findViewById<Button>(R.id.cancel_button)?.setOnClickListener {
             // Dismiss the dialog when cancel button is clicked
-            dialog?.dismiss()
+            alertDialog.dismiss()
         }
 
-
-// Create the AlertDialog
-        val alertDialog = alertDialogBuilder.create()
         alertDialog.show()
-
         return alertDialog
     }
 }
-

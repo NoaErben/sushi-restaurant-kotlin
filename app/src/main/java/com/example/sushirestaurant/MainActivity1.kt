@@ -33,6 +33,6 @@ class MainActivity1 : AppCompatActivity() {
 
             // Finish current activity to prevent user from going back to it
             finish()
-        }, 2330)
+        }, 2350)
     }
 }
