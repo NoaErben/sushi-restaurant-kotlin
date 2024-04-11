@@ -54,10 +54,12 @@
     <string name="how_many_people">כמה אנשים תהיו?</string>
     <string name="pick_a_date">בחר תאריך:</string>
     <string name="arrival_hour">שעת הגעה רצויה:</string>
-    <string name="are_you_vegan">האם את/ה טבעוני/ת?</string>
+    <string name="vegan">האם את/ה טבעוני/ת? (חובה)</string>
+    <string name="vegan_label">טבעוני/ת:</string>
+    <string name="payment_label">אופן תשלום:</string>
     <string name="yes">כן</string>
     <string name="no">לא</string>
-    <string name="please_choose_your_preferred_method_of_payment">בחר את אופן התשלום:</string>
+    <string name="payment_method">בחר את אופן התשלום: (חובה)</string>
     <string name="cash">מזומן</string>
     <string name="credit_card">כרטיס אשראי</string>
     <string name="buyme">Buyme</string>
@@ -74,6 +76,7 @@
     <string name="selected_hour_label">שעת הגעה:</string>
     <string name="date_label">תאריך:</string>
     <string name="ok_button_label">אישור</string>
+    <string name="none">ללא</string>
 
 
 

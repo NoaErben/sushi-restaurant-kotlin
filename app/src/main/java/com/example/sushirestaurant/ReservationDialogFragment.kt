@@ -10,6 +10,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import android.widget.EditText
 import android.widget.Button
+import android.widget.RadioButton
 
 
 class ReservationDialogFragment : DialogFragment() {
@@ -57,6 +58,20 @@ class ReservationDialogFragment : DialogFragment() {
             val dayOfMonth = datePicker.dayOfMonth
             val month = datePicker.month
             val year = datePicker.year
+            val veganYes = view.findViewById<RadioButton>(R.id.vegan_yes_answer).isChecked
+            val veganNo = view.findViewById<RadioButton>(R.id.vegan_no_answer).isChecked
+            val paymentCash = view.findViewById<RadioButton>(R.id.cash).isChecked
+            val creditCard = view.findViewById<RadioButton>(R.id.credit_card).isChecked
+            val buyMe = view.findViewById<RadioButton>(R.id.buyme).isChecked
+
+            // save the user's answers
+            val veganAnswer = if (veganYes) getString(R.string.yes) else getString(R.string.no)
+            val paymentMethodAnswer = when {
+                paymentCash -> getString(R.string.cash)
+                creditCard -> getString(R.string.credit_card)
+                buyMe -> getString(R.string.buyme)
+                else -> getString(R.string.none)
+            }
 
             // save the labels of the reservation details
             val fullNameLabel = getString(R.string.full_name_label)
@@ -65,11 +80,14 @@ class ReservationDialogFragment : DialogFragment() {
             val numPeopleLabel = getString(R.string.num_people_label)
             val selectedHourLabel = getString(R.string.selected_hour_label)
             val dateLabel = getString(R.string.date_label)
+            val veganLabel = getString(R.string.vegan_label)
+            val paymentLabel = getString(R.string.payment_label)
 
             val okButtonLabel =  getString(R.string.ok_button_label)
 
 
-            if (fullName.isEmpty() || phoneNumber.isEmpty() || email.isEmpty()) {
+            if (fullName.isEmpty() || phoneNumber.isEmpty() || email.isEmpty() || (!veganYes && !veganNo)
+                || (!paymentCash && !creditCard && !buyMe)) {
                 // Display error message if any required field is empty
                 AlertDialog.Builder(requireContext())
                     .setTitle((getString(R.string.error)))
@@ -83,7 +101,9 @@ class ReservationDialogFragment : DialogFragment() {
                         "$emailLabel $email\n" +
                         "$numPeopleLabel $numPeople\n" +
                         "$selectedHourLabel $selectedHour\n" +
-                        "$dateLabel $dayOfMonth/$month/$year"
+                        "$dateLabel $dayOfMonth/$month/$year\n" +
+                        "$veganLabel $veganAnswer\n" +
+                        "$paymentLabel $paymentMethodAnswer\n"
                 AlertDialog.Builder(requireContext())
                     .setTitle(getString(R.string.reservation_deatils_title))
                     .setMessage(message)

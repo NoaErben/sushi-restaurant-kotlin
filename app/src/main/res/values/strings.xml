@@ -51,10 +51,10 @@
     <string name="how_many_people">How many people?</string>
     <string name="pick_a_date">Pick a date </string>
     <string name="arrival_hour">Arrival hour </string>
-    <string name="are_you_vegan">Are you vegan? </string>
+    <string name="vegan">Are you vegan? (Required)</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="please_choose_your_preferred_method_of_payment">Please choose your preferred method of payment (Required)</string>
+    <string name="payment_method">Please choose your preferred method of payment (Required)</string>
     <string name="cash">Cash</string>
     <string name="credit_card">Credit Card</string>
     <string name="buyme">Buyme</string>
@@ -69,8 +69,11 @@
     <string name="email_label">Email:</string>
     <string name="num_people_label">Number of People:</string>
     <string name="selected_hour_label">Selected Hour:</string>
+    <string name="payment_label">Payment Method:</string>
+    <string name="vegan_label">Vegan:</string>
     <string name="date_label">Date:</string>
     <string name="ok_button_label">OK</string>
+    <string name="none">None</string>
 
 
     <string-array name="num_people_array">
