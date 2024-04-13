@@ -10,29 +10,31 @@
 
     <TextView
         android:id="@+id/sakura_restaurant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:fontFamily="@font/amaranth"
         android:text="Sakura"
         android:textColor="@color/white"
         android:textSize="43sp"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintVertical_bias="0.55" />
 
     <ImageView
         android:id="@+id/nigiri_icon"
         android:layout_width="300dp"
         android:layout_height="300dp"
+        android:scaleType="fitCenter"
         android:src="@drawable/nigiri_icon"
-        app:layout_constraintBottom_toBottomOf="@id/sakura_restaurant"
-        app:layout_constraintEnd_toEndOf="@id/sakura_restaurant"
-        app:layout_constraintHorizontal_bias="0.093"
-        app:layout_constraintStart_toStartOf="@id/sakura_restaurant"
-        app:layout_constraintTop_toTopOf="@id/sakura_restaurant"
-        app:layout_constraintVertical_bias="0.878" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintHorizontal_bias="1.1" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

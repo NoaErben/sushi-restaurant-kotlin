@@ -6,32 +6,34 @@ import android.os.Handler
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import java.util.*
 
 class MainActivity1 : AppCompatActivity() {
     private val handler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // Set the layout for this activity
         setContentView(R.layout.activity_main1)
-        val slideRightAnim = AnimationUtils.loadAnimation(
-            applicationContext,
-            R.anim.slide_right
-        )
 
         val nigiri_img = findViewById<ImageView>(R.id.nigiri_icon)
-        nigiri_img.startAnimation(slideRightAnim)
 
-        // Use Handler to delay execution of code for 3000 milliseconds (3 seconds)
+        // Get the current locale
+        val currentLocale = Locale.getDefault().language
+
+        // Load the appropriate animation based on the locale
+        val slideAnim = if (currentLocale == "he") {
+            // Load the RTL animation for Hebrew
+            AnimationUtils.loadAnimation(applicationContext, R.anim.slide_right_rtl)
+        } else {
+            // Load the default LTR animation for other languages
+            AnimationUtils.loadAnimation(applicationContext, R.anim.slide_right)
+        }
+
+        nigiri_img.startAnimation(slideAnim)
+
         handler.postDelayed({
-            // Create an Intent to start MainActivity2
             val intent = Intent(this@MainActivity1, MainActivity2::class.java)
-
-            // Start MainActivity2
             startActivity(intent)
-
-            // Finish current activity to prevent user from going back to it
             finish()
         }, 2350)
     }

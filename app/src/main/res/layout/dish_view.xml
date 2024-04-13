@@ -8,9 +8,9 @@
 
     <ImageView
         android:id="@+id/image_view"
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-        android:layout_margin="3dp"
+        android:layout_width="110dp"
+        android:layout_height="88dp"
+        android:layout_margin="2dp"
         android:scaleType="fitXY" />
 
     <TextView
@@ -32,23 +32,8 @@
         android:id="@+id/descriptionText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="12sp"
-        android:layout_marginTop="2dp"
-        android:textAlignment="center"
-        android:lines="6" />
+        android:textSize="5sp"
+        android:textAlignment="center" />
 
-    <!-- This initially hidden ImageView holds the zoomed version of
-         the preceding images. Without transformations applied, it fills the entire
-         screen. To achieve the zoom animation, this view's bounds are animated
-         from the bounds of the preceding thumbnail button to its final laid-out
-         bounds.
-         -->
-
-    <ImageView
-        android:id="@+id/expanded_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"/>
-<!--        android:contentDescription="@string/description_zoom_touch_close" />-->
 
 </LinearLayout>
