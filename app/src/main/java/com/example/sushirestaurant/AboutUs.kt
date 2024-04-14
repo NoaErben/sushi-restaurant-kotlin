@@ -1,9 +1,11 @@
 package com.example.sushirestaurant
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import android.view.animation.AnimationUtils
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 
@@ -22,16 +24,13 @@ class AboutUs : AppCompatActivity()  {
         val rotateRightEye = AnimationUtils.loadAnimation(applicationContext, R.anim.rotate)
 
 
-//        val ladySushiLeftEye = findViewById<ImageView>(R.id.left_eye_lady_sushi)
-//        ladySushiLeftEye.startAnimation(rotateLeftEye)
-//
-//        val ladySushiRightEye = findViewById<ImageView>(R.id.right_eye_lady_sushi)
-//        ladySushiRightEye.startAnimation(rotateRightEye)
+        // Set the back home button
+        val aboutUsButton = findViewById<Button>(R.id.back_button)
+        aboutUsButton.setOnClickListener {
+            // Start the AboutUs activity
+            startActivity(Intent(this, MainActivity2::class.java))
+        }
 
-
-        // Start the fade in animation
-//        val ladySushi = findViewById<ImageView>(R.id.lady_sushi)
-//        ladySushi.startAnimation(fadeIn)
 
         // Start in the same time the zoom in animation
         val visionLabel = findViewById<TextView>(R.id.vision_label)
@@ -68,12 +67,5 @@ class AboutUs : AppCompatActivity()  {
             val ladySushiRightEye = findViewById<ImageView>(R.id.right_eye_lady_sushi)
             ladySushiRightEye.startAnimation(rotateRightEye)
         }, 1500)
-//
-//        // Use a Handler to start the third animation after a delay
-//        Handler().postDelayed({
-//            val ladySushi = findViewById<ImageView>(R.id.lady_sushi)
-//            ladySushi.visibility = View.VISIBLE
-//            ladySushi.startAnimation(slideUpLadySushi)
-//        }, 5000) // Delay in milliseconds (adjust as needed)
     }
 }
