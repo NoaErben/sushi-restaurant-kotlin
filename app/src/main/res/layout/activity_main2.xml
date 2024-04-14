@@ -71,17 +71,32 @@
             android:id="@+id/reserve_seats"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/reserve_seats"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/background_image"
             app:layout_constraintEnd_toEndOf="@+id/background_image"
+            app:layout_constraintHorizontal_bias="0.772"
             app:layout_constraintStart_toStartOf="@+id/background_image"
             app:layout_constraintWidth_percent=".8" />
-<!--            android:background="@drawable/reserve_seats_btn_clicked"-->
 
+        <!--        about us button-->
+        <Button
+            android:id="@+id/about_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/about_us"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/background_image"
+            app:layout_constraintEnd_toEndOf="@+id/background_image"
+            app:layout_constraintHorizontal_bias="0.265"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintWidth_percent=".8" />
 
         <!--    starters-->
         <TextView
