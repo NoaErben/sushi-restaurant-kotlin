@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/amaranth"
             android:gravity="center"
-            android:text="@string/our"
+            android:text="@string/our_vision_label"
             android:textColor="@color/white"
             android:textSize="45sp"
             tools:ignore="MissingConstraints" />
