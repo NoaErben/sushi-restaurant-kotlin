@@ -20,10 +20,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-<!--        back button-->
         <Button
             android:id="@+id/back_button"
-            android:layout_width="77dp"
+            android:layout_width="78dp"
             android:layout_height="40dp"
             android:layout_marginStart="250dp"
             android:text="@string/back"
@@ -132,7 +131,7 @@
 
 
 
-<Space
+    <Space
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"/>

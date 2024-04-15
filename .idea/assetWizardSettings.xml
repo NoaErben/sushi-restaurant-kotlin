@@ -23,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/info_outline/baseline_info_outline_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/close/baseline_close_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -33,8 +33,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="6750a4" />
-                            <entry key="outputName" value="baseline_info_outline_24" />
+                            <entry key="color" value="818080" />
+                            <entry key="outputName" value="close_button" />
                           </map>
                         </option>
                       </PersistentState>

@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
 import android.graphics.Color
+import android.widget.ImageButton
 
 class DishView @JvmOverloads constructor(
     context: Context,
@@ -100,6 +101,14 @@ class DishView @JvmOverloads constructor(
         val descriptionTextView: TextView = dialog.findViewById(R.id.dialog_description)
         descriptionTextView.text = description
 
+        val closeButton = dialog.findViewById<ImageButton>(R.id.close_button)
+        closeButton.setOnClickListener {
+            // Dismiss the dialog when cancel button is clicked
+            dialog.dismiss()
+        }
+
         dialog.show()
     }
+
+
 }
