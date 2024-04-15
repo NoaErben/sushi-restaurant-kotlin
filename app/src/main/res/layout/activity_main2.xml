@@ -26,30 +26,52 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-<!--        welcome text -->
 
+        <Button
+            android:id="@+id/about_us"
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@null"
+            android:foreground="@drawable/info_button"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintTop_toTopOf="@+id/background_image"
+            app:layout_constraintDimensionRatio="1:1"/>
+
+
+
+        <!--        welcome text -->
+
+
+        <!--        reserve seats button-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="@+id/background_image"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/background_image"
-            app:layout_constraintTop_toTopOf="@+id/background_image"
-            android:orientation="horizontal">
+            app:layout_constraintTop_toTopOf="@+id/background_image">
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.8"/>
+                android:layout_weight="0.8" />
 
             <TextView
                 android:id="@+id/welcome_text"
                 android:layout_width="0dp"
-                android:layout_weight="3"
                 android:layout_height="wrap_content"
                 android:layout_margin="25dp"
-                android:layout_marginEnd="25dp"
                 android:layout_marginTop="96dp"
+                android:layout_marginEnd="25dp"
                 android:layout_marginBottom="10dp"
+                android:layout_weight="3"
                 android:fontFamily="@font/actor"
                 android:gravity="center"
                 android:text="@string/welcome_to_sakura_asian_and_sushi_bar"
@@ -59,14 +81,11 @@
             <Space
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.8"/>
+                android:layout_weight="0.8" />
 
 
         </LinearLayout>
 
-
-
-        <!--        reserve seats button-->
         <Button
             android:id="@+id/reserve_seats"
             android:layout_width="wrap_content"
@@ -78,25 +97,24 @@
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/background_image"
             app:layout_constraintEnd_toEndOf="@+id/background_image"
-            app:layout_constraintHorizontal_bias="0.772"
             app:layout_constraintStart_toStartOf="@+id/background_image"
             app:layout_constraintWidth_percent=".8" />
 
         <!--        about us button-->
-        <Button
-            android:id="@+id/about_us"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="@string/about_us"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/background_image"
-            app:layout_constraintEnd_toEndOf="@+id/background_image"
-            app:layout_constraintHorizontal_bias="0.265"
-            app:layout_constraintStart_toStartOf="@+id/background_image"
-            app:layout_constraintWidth_percent=".8" />
+<!--        <Button-->
+<!--            android:id="@+id/about_us"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:text="@string/about_us"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="16sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/background_image"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/background_image"-->
+<!--            app:layout_constraintHorizontal_bias="0.265"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/background_image"-->
+<!--            app:layout_constraintWidth_percent=".8" />-->
 
         <!--    starters-->
         <TextView

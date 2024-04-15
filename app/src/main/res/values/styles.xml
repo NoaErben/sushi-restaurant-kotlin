@@ -10,7 +10,7 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">18sp</item>
         <item name="android:padding">0dp</item>
-        <item name="android:background">@drawable/reserve_seats_btn</item>
+        <item name="android:background">@drawable/circle_info_shape</item>
     </style>
 
 </resources>
