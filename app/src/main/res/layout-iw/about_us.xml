@@ -20,10 +20,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!--        back button-->
         <Button
             android:id="@+id/back_button"
-            android:layout_width="77dp"
+            android:layout_width="78dp"
             android:layout_height="40dp"
             android:layout_marginStart="250dp"
             android:text="@string/back"
@@ -161,7 +160,7 @@
                 tools:ignore="MissingConstraints" />
 
             <ImageView
-                android:id="@+id/left_eye_lady_sushi"
+                android:id="@+id/right_eye_lady_sushi"
                 android:layout_width="52dp"
                 android:layout_height="49dp"
                 android:layout_marginBottom="244dp"
@@ -170,12 +169,12 @@
                 android:src="@drawable/sushi_left_eye"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.42"
+                app:layout_constraintHorizontal_bias="0.583"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
-                android:id="@+id/right_eye_lady_sushi"
+                android:id="@+id/left_eye_lady_sushi"
                 android:layout_width="54dp"
                 android:layout_height="53dp"
                 android:layout_marginBottom="244dp"
@@ -185,9 +184,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
 
-                app:layout_constraintHorizontal_bias="0.689"
+                app:layout_constraintHorizontal_bias="0.313"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="MissingConstraints" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

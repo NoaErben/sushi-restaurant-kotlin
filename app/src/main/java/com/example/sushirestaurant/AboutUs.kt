@@ -36,6 +36,8 @@ class AboutUs : AppCompatActivity()  {
         val visionLabel = findViewById<TextView>(R.id.vision_label)
         visionLabel.startAnimation(bounceVision)
 
+
+        //starts animation
         val zoomStar1 = findViewById<ImageView>(R.id.star1)
         zoomStar1.startAnimation(zoomOutStar)
         val zoomStar2 = findViewById<ImageView>(R.id.star2)
