@@ -83,10 +83,7 @@
     <string name="back">חזרה</string>
     <string name="vision_description">בסאקורה, אנחנו מאמינים בכוח של האוכל להזין את הנפש. יחד עם כבוד לטעמים ולמורשת האסיאתית, אנו יוצרים חוויה קולינרית יוצאת דופן! הצטרפו אלינו לערב יוצא דופן של טעמים אסיאתיים</string>
     <string name="i">i</string>
-
-
-
-
+    <string name="selected_date">תאריך נבחר: %s</string>
 
 
 </resources>

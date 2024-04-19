@@ -1,26 +1,39 @@
+/**
+ * This class represents a dialog fragment for making restaurant reservations.
+ * It allows users to input their reservation details such as name, phone number, email, number of people,
+ * selected hour, date, dietary preferences, and payment method. It also provides validation for required fields
+ * and displays reservation details in an alert dialog before navigating back to the main activity.
+ */
+
+// widget 1 - DatePicker with OnDateChangedListener
+
 package com.example.sushirestaurant
 
 import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.widget.ArrayAdapter
-import android.widget.DatePicker
 import android.widget.Spinner
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import android.widget.EditText
 import android.widget.Button
+import android.widget.DatePicker
 import android.widget.RadioButton
+import android.widget.Toast
 
+class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedListener {
 
-class ReservationDialogFragment : DialogFragment() {
+    private var selectedDate: String? = null
+    private var handler: Handler = Handler()
+    private var dateChangedRunnable: Runnable = Runnable { }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val inflater = requireActivity().layoutInflater
         val view = inflater.inflate(R.layout.dialog_reservation, null)
 
-        //todo - check if it is a widget type
-
+        // Initialize spinner for selecting the number of people
         val numPeopleSpinner: Spinner = view.findViewById(R.id.num_people_spinner)
         ArrayAdapter.createFromResource(
             requireContext(),
@@ -31,6 +44,7 @@ class ReservationDialogFragment : DialogFragment() {
             numPeopleSpinner.adapter = adapter
         }
 
+        // Initialize spinner for selecting the hour
         val hourSpinner: Spinner = view.findViewById(R.id.hours_spinner)
         ArrayAdapter.createFromResource(
             requireContext(),
@@ -41,15 +55,17 @@ class ReservationDialogFragment : DialogFragment() {
             hourSpinner.adapter = adapter
         }
 
+        // Initialize DatePicker and set listener
         val datePicker = view.findViewById<DatePicker>(R.id.date_picker)
+        datePicker.init(datePicker.year, datePicker.month, datePicker.dayOfMonth, this)
 
+        // Build AlertDialog
         val alertDialogBuilder = AlertDialog.Builder(requireContext())
             .setTitle(getString(R.string.reservation_title))
             .setView(view)
-
-        // Retrieve data from views and show the dialog when the submit button is clicked
         val alertDialog = alertDialogBuilder.create()
 
+        // Handle submit button click
         view.findViewById<Button>(R.id.submit_button)?.setOnClickListener {
             // Retrieve data from views
             val fullName = view.findViewById<EditText>(R.id.full_name).text.toString()
@@ -57,16 +73,13 @@ class ReservationDialogFragment : DialogFragment() {
             val email = view.findViewById<EditText>(R.id.email).text.toString()
             val numPeople = numPeopleSpinner.selectedItem.toString()
             val selectedHour = hourSpinner.selectedItem.toString()
-            val dayOfMonth = datePicker.dayOfMonth
-            val month = datePicker.month
-            val year = datePicker.year
             val veganYes = view.findViewById<RadioButton>(R.id.vegan_yes_answer).isChecked
             val veganNo = view.findViewById<RadioButton>(R.id.vegan_no_answer).isChecked
             val paymentCash = view.findViewById<RadioButton>(R.id.cash).isChecked
             val creditCard = view.findViewById<RadioButton>(R.id.credit_card).isChecked
             val buyMe = view.findViewById<RadioButton>(R.id.buyme).isChecked
 
-            // save the user's answers
+            // Save the user's answers
             val veganAnswer = if (veganYes) getString(R.string.yes) else getString(R.string.no)
             val paymentMethodAnswer = when {
                 paymentCash -> getString(R.string.cash)
@@ -75,7 +88,7 @@ class ReservationDialogFragment : DialogFragment() {
                 else -> getString(R.string.none)
             }
 
-            // save the labels of the reservation details
+            // Save the labels of the reservation details
             val fullNameLabel = getString(R.string.full_name_label)
             val phoneNumberLabel = getString(R.string.phone_number_label)
             val emailLabel = getString(R.string.email_label)
@@ -85,8 +98,7 @@ class ReservationDialogFragment : DialogFragment() {
             val veganLabel = getString(R.string.vegan_label)
             val paymentLabel = getString(R.string.payment_label)
 
-            val okButtonLabel =  getString(R.string.ok_button_label)
-
+            val okButtonLabel = getString(R.string.ok_button_label)
 
             if (fullName.isEmpty() || phoneNumber.isEmpty() || email.isEmpty() || (!veganYes && !veganNo)
                 || (!paymentCash && !creditCard && !buyMe)) {
@@ -103,7 +115,7 @@ class ReservationDialogFragment : DialogFragment() {
                         "$emailLabel $email\n" +
                         "$numPeopleLabel $numPeople\n" +
                         "$selectedHourLabel $selectedHour\n" +
-                        "$dateLabel $dayOfMonth/$month/$year\n" +
+                        "$dateLabel $selectedDate\n" +
                         "$veganLabel $veganAnswer\n" +
                         "$paymentLabel $paymentMethodAnswer\n"
                 AlertDialog.Builder(requireContext())
@@ -111,12 +123,11 @@ class ReservationDialogFragment : DialogFragment() {
                     .setMessage(message)
                     .setPositiveButton(okButtonLabel) { dialog, _ ->
                         dialog.dismiss()
-                        // Navigate back to the main activity (MainActivity)
+                        // Navigate back to MainActivity2
                         val intent = Intent(requireContext(), MainActivity2::class.java)
                         startActivity(intent)
                     }
                     .show()
-
             }
         }
 
@@ -128,5 +139,18 @@ class ReservationDialogFragment : DialogFragment() {
 
         alertDialog.show()
         return alertDialog
+    }
+
+    override fun onDateChanged(view: DatePicker?, year: Int, monthOfYear: Int, dayOfMonth: Int) {
+        // Format the selected date
+        selectedDate = String.format("%02d/%02d/%d", dayOfMonth, monthOfYear + 1, year)
+        // Remove any existing callbacks to avoid multiple executions
+        handler.removeCallbacks(dateChangedRunnable)
+        // Post a delayed runnable to update the toast message
+        dateChangedRunnable = Runnable {
+            val message = getString(R.string.selected_date, selectedDate)
+            Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+        }
+        handler.postDelayed(dateChangedRunnable, 1000) // Delay the message's show time
     }
 }

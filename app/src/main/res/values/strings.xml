@@ -81,6 +81,7 @@
     <string name="contact_details">Dizzengof 105, Tel Aviv | 03-6081934</string>
     <string name="back">Back</string>
     <string name="i">i</string>
+    <string name="selected_date">Selected date: %s</string>
 
 
     <string-array name="num_people_array">
