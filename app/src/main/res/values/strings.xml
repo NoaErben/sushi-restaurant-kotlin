@@ -49,7 +49,7 @@
     <string name="your_phone_number">Your phone number (Required)</string>
     <string name="your_email">Your email (Required)</string>
     <string name="how_many_people">How many people?</string>
-    <string name="pick_a_date">Pick a date </string>
+    <string name="pick_a_date">Pick a date: </string>
     <string name="arrival_hour">Arrival hour </string>
     <string name="vegan">Are you vegan? (Required)</string>
     <string name="yes">Yes</string>

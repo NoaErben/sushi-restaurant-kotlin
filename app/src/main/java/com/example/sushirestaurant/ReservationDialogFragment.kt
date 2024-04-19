@@ -7,14 +7,17 @@
 
 // widget 1 - DatePicker with OnDateChangedListener
 // widget 2 - Switch with OnCheckedChangeListener
+// widget 3 - SeekBar with SeekBarChangeListener
 
 package com.example.sushirestaurant
 
 import android.app.Dialog
 import android.content.Intent
+import android.icu.util.Calendar
 import android.os.Bundle
 import android.os.Handler
 import android.widget.ArrayAdapter
+import android.widget.SeekBar
 import android.widget.Spinner
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
@@ -22,6 +25,7 @@ import android.widget.EditText
 import android.widget.Button
 import android.widget.DatePicker
 import android.widget.RadioButton
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.SwitchCompat
 
@@ -42,16 +46,6 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
             Toast.makeText(requireContext(), toastMessage, Toast.LENGTH_SHORT).show()
         }
 
-        // Initialize spinner for selecting the number of people
-        val numPeopleSpinner: Spinner = view.findViewById(R.id.num_people_spinner)
-        ArrayAdapter.createFromResource(
-            requireContext(),
-            R.array.num_people_array,
-            android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            numPeopleSpinner.adapter = adapter
-        }
 
         // Initialize spinner for selecting the hour
         val hourSpinner: Spinner = view.findViewById(R.id.hours_spinner)
@@ -68,6 +62,20 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
         val datePicker = view.findViewById<DatePicker>(R.id.date_picker)
         datePicker.init(datePicker.year, datePicker.month, datePicker.dayOfMonth, this)
 
+        // Initialize SeekBar and TextView for selecting the number of people
+        val numPeopleSeekBar= view.findViewById<SeekBar>(R.id.num_people_seek_bar)
+        val numPeopleTextView: TextView = view.findViewById(R.id.num_people_text_view)
+
+        numPeopleSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                numPeopleTextView.text = (progress+1).toString() // Add 1 to progress since SeekBar starts from 0
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+        })
+
         // Build AlertDialog
         val alertDialogBuilder = AlertDialog.Builder(requireContext())
             .setTitle(getString(R.string.reservation_title))
@@ -80,8 +88,15 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
             val fullName = view.findViewById<EditText>(R.id.full_name).text.toString()
             val phoneNumber = view.findViewById<EditText>(R.id.phone_number).text.toString()
             val email = view.findViewById<EditText>(R.id.email).text.toString()
-            val numPeople = numPeopleSpinner.selectedItem.toString()
-            val selectedHour = hourSpinner.selectedItem.toString()
+            val numPeople = numPeopleSeekBar.progress.toString()
+            val selectedHour = hourSpinner.selectedItem?.toString() ?: "12:00" // Default to "12:00" if no hour is selected
+            // Set month to be " month+1 because the indexing for months starts from 0"
+            val selectedDate = datePicker?.run {
+                String.format("%02d/%02d/%d", dayOfMonth, month + 1, year)
+            } ?: run {
+                val currentDate = Calendar.getInstance()
+                String.format("%02d/%02d/%d", currentDate.get(Calendar.DAY_OF_MONTH), currentDate.get(Calendar.MONTH) + 1, currentDate.get(Calendar.YEAR))
+            } // Default to today's date if no date is selected
             val veganYes = view.findViewById<RadioButton>(R.id.vegan_yes_answer).isChecked
             val veganNo = view.findViewById<RadioButton>(R.id.vegan_no_answer).isChecked
             val paymentCash = view.findViewById<RadioButton>(R.id.cash).isChecked
@@ -127,7 +142,6 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
                         "$dateLabel $selectedDate\n" +
                         "$veganLabel $veganAnswer\n" +
                         "$paymentLabel $paymentMethodAnswer\n"
-
 
                 AlertDialog.Builder(requireContext())
                     .setTitle(getString(R.string.reservation_deatils_title))

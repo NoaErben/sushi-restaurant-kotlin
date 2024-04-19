@@ -45,28 +45,44 @@
             android:layout_marginHorizontal="20dp"
             android:hint="@string/your_email"
             android:textSize="16sp"
-            android:layout_marginBottom="5dp" />
+            android:layout_marginBottom="10dp" />
 
-    <!--    how many people drop-down selection-->
-        <TextView
-            android:id="@+id/num_people"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="209dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:text="@string/how_many_people"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-        />
-
-        <Spinner
-            android:id="@+id/num_people_spinner"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="20dp"
-            />
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/num_people_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/how_many_people"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/num_people_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <SeekBar
+            android:id="@+id/num_people_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="30dp"
+            android:max="15"
+             />
 
         <!--    date picker selection -->
         <TextView
@@ -75,6 +91,7 @@
             android:layout_width="209dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/pick_a_date"
             android:textSize="16sp"
             android:textStyle="bold" />
