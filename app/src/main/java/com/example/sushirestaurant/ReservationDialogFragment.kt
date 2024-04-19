@@ -6,6 +6,7 @@
  */
 
 // widget 1 - DatePicker with OnDateChangedListener
+// widget 2 - Switch with OnCheckedChangeListener
 
 package com.example.sushirestaurant
 
@@ -22,6 +23,7 @@ import android.widget.Button
 import android.widget.DatePicker
 import android.widget.RadioButton
 import android.widget.Toast
+import androidx.appcompat.widget.SwitchCompat
 
 class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedListener {
 
@@ -32,6 +34,13 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val inflater = requireActivity().layoutInflater
         val view = inflater.inflate(R.layout.dialog_reservation, null)
+
+        // Initialize subscribeSwitch and set its OnCheckedChangeListener
+        val subscribeSwitch: SwitchCompat = view.findViewById(R.id.subscribe_switch)
+        subscribeSwitch.setOnCheckedChangeListener { _, isChecked ->
+            val toastMessage = if (isChecked) getString(R.string.subscribe_yes) else getString(R.string.subscribe_no)
+            Toast.makeText(requireContext(), toastMessage, Toast.LENGTH_SHORT).show()
+        }
 
         // Initialize spinner for selecting the number of people
         val numPeopleSpinner: Spinner = view.findViewById(R.id.num_people_spinner)
@@ -118,6 +127,8 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
                         "$dateLabel $selectedDate\n" +
                         "$veganLabel $veganAnswer\n" +
                         "$paymentLabel $paymentMethodAnswer\n"
+
+
                 AlertDialog.Builder(requireContext())
                     .setTitle(getString(R.string.reservation_deatils_title))
                     .setMessage(message)

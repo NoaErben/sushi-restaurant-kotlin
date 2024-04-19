@@ -82,6 +82,9 @@
     <string name="back">Back</string>
     <string name="i">i</string>
     <string name="selected_date">Selected date: %s</string>
+    <string name="subscribe_switch">Subscribe to our Newsletter</string>
+    <string name="subscribe_yes">Subscribe: Yes</string>
+    <string name="subscribe_no">Subscribe: No</string>
 
 
     <string-array name="num_people_array">
