@@ -19,6 +19,8 @@ class ReservationDialogFragment : DialogFragment() {
         val inflater = requireActivity().layoutInflater
         val view = inflater.inflate(R.layout.dialog_reservation, null)
 
+        //todo - check if it is a widget type
+
         val numPeopleSpinner: Spinner = view.findViewById(R.id.num_people_spinner)
         ArrayAdapter.createFromResource(
             requireContext(),
