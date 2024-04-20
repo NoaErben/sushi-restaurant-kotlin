@@ -9,6 +9,8 @@
 // widget 2 - Switch with OnCheckedChangeListener
 // widget 3 - SeekBar with SeekBarChangeListener
 
+// widget 4 - EditText ? or checkBox
+
 package com.example.sushirestaurant
 
 import android.app.Dialog
