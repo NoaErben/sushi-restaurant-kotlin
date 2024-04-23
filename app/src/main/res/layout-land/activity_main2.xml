@@ -1,6 +1,476 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:textDirection="locale"
+    android:textAlignment="viewStart">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/welcome_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ver_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:foreground="@drawable/foreground_design"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/our_view_button"
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:text="@string/i"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toTopOf="@+id/background_image"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintWidth_percent=".8" />
+
+
+        <LinearLayout
+            android:id="@+id/welcome_text_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/background_image"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintTop_toTopOf="@+id/background_image">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9" />
+
+            <!--        welcome text -->
+            <TextView
+                android:id="@+id/welcome_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                android:layout_weight="3"
+                android:fontFamily="@font/actor"
+                android:gravity="center"
+                android:layoutDirection="ltr"
+                android:text="@string/welcome_to_sakura_asian_and_sushi_bar"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+
+
+
+        </LinearLayout>
+
+        <!--        reserve seats button-->
+        <Button
+            android:id="@+id/reserve_seats_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="@string/reserve_seats"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/background_image"
+            app:layout_constraintEnd_toEndOf="@+id/background_image"
+            app:layout_constraintStart_toEndOf="@+id/background_image"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            android:layoutDirection="ltr"
+            />
+
+
+        <!--    starters-->
+        <TextView
+            android:id="@+id/starters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/amaranth"
+            android:text="@string/starters"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:paddingStart="6dp"
+            app:layout_constraintEnd_toEndOf="@+id/background_image"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintTop_toBottomOf="@+id/background_image" />
+
+        <HorizontalScrollView
+            android:id="@+id/hor_scroll_starters"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/starters"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/pani_puri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/pani_puri_description"
+                    app:imageSrc="@drawable/pani_puri"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/pani_puri_label"
+                    app:price = "47₪" >
+
+                    <com.example.sushirestaurant.DishView
+                        android:id="@+id/nams"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:descriptionText="@string/nams_description"
+                        app:imageSrc="@drawable/nams"
+                        app:labelColor="@color/black"
+                        app:labelText="@string/nams_label"
+                        app:price="48₪" />
+                </com.example.sushirestaurant.DishView>
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/meat_bun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/meat_bun_description"
+                    app:imageSrc="@drawable/meat_bun"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/meat_bun_label"
+                    app:price = "50₪" />
+
+
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/agedashi_tofu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/agedashi_tofu_description"
+                    app:imageSrc="@drawable/agedashi_tofu"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/agedashi_tofu_label"
+                    app:price="52₪" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!--    main course-->
+        <TextView
+            android:id="@+id/main_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/amaranth"
+            android:text="@string/main_course"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:paddingStart="6dp"
+            app:layout_constraintEnd_toEndOf="@+id/hor_scroll_starters"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintTop_toBottomOf="@+id/hor_scroll_starters" />
+
+        <HorizontalScrollView
+            android:id="@+id/hor_scroll_main_course"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/main_course"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/pad_thai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/pad_tai_description"
+                    app:imageSrc="@drawable/pad_thai"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/pad_thai_label"
+                    app:price = "70₪"/>
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/ramen_soup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/ramen_soup_description"
+                    app:imageSrc="@drawable/ramen_soup"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/ramen_soup_label"
+                    app:price = "68₪"/>
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/rainbow_roll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/rainbow_roll_description"
+                    app:imageSrc="@drawable/rainbow_roll"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/rainbow_roll_label"
+                    app:price = "62₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/sechuan_beef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/sechuan_beef_description"
+                    app:imageSrc="@drawable/sechuan_beef"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/sechuan_beef_label"
+                    app:price = "71₪" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- desserts -->
+        <TextView
+            android:id="@+id/dessert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/amaranth"
+            android:text="@string/desserts"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:paddingStart="6dp"
+            app:layout_constraintEnd_toEndOf="@+id/hor_scroll_main_course"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintTop_toBottomOf="@+id/hor_scroll_main_course"
+            />
+
+
+        <HorizontalScrollView
+            android:id="@+id/hor_scroll_desserts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/dessert"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/mango_tapioca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/mango_tapioca_description"
+                    app:imageSrc="@drawable/mango_tapioca"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/mango_tapioca_label"
+                    app:price = "45₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/matcha_ice_cream"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/matcha_ice_cream_description"
+                    app:imageSrc="@drawable/matcha_ice_cream"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/matcha_ice_cream_label"
+                    app:price = "30₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/japanese_garden"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/japanese_garden_description"
+                    app:imageSrc="@drawable/japanese_garden"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/japanese_garden_label"
+                    app:price = "48₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/fruit_pancakes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/fruit_pancakes_description"
+                    app:imageSrc="@drawable/fruit_pancakes"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/fruit_pancakes_label"
+                    app:price = "38₪" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- cocktails -->
+        <TextView
+            android:id="@+id/cocktail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/amaranth"
+            android:text="@string/cocktails"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:paddingStart="6dp"
+            app:layout_constraintEnd_toEndOf="@+id/hor_scroll_desserts"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintTop_toBottomOf="@+id/hor_scroll_desserts" />
+
+        <HorizontalScrollView
+            android:id="@+id/hor_scroll_cocktails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/cocktail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/martini_lychee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/martini_lychee_description"
+                    app:imageSrc="@drawable/martini_lychee"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/martini_lychee_label"
+                    app:price = "54₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/matcha_margarita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/matcha_margarita_description"
+                    app:imageSrc="@drawable/matcha_margarita"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/matcha_margarita_label"
+                    app:price = "48₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/sakura_sunset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/sakura_sunset_description"
+                    app:imageSrc="@drawable/sakura_sunset"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/sakura_sunset_label"
+                    app:price = "52₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/shochu_flower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/shochu_flower_descripton"
+                    app:imageSrc="@drawable/shochu_flower"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/shochu_flower_label"
+                    app:price = "54₪" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- soft drinks -->
+        <TextView
+            android:id="@+id/soft_drinks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/amaranth"
+            android:text="@string/soft_drinks"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:paddingStart="6dp"
+            app:layout_constraintEnd_toEndOf="@+id/hor_scroll_cocktails"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/background_image"
+            app:layout_constraintTop_toBottomOf="@+id/hor_scroll_cocktails" />
+
+        <HorizontalScrollView
+            android:id="@+id/hor_scroll_soft_drinks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/soft_drinks"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/cola"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:imageSrc="@drawable/cola"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/cola_label_text"
+                    app:price = "13₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/sprite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:imageSrc="@drawable/sprite"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/sprite_label_text"
+                    app:price = "12₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/mineral_water"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:imageSrc="@drawable/water"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/mineral_water_label_text"
+                    app:price = "11₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/fuze_tea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:imageSrc="@drawable/fuze_tea"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/fuze_tea_label_text"
+                    app:price = "13₪" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

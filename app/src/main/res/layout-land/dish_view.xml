@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/dish_view"
+    android:orientation="vertical"
+    android:layout_width="120dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/card_background"
+    android:elevation="4dp"
+    android:layout_margin="3dp"
+    android:layoutDirection="ltr">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="110dp"
+        android:layout_height="88dp"
+        android:layout_margin="2dp"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/label_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        android:textStyle="bold"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="3dp"/>
+
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="5sp"
+        android:textAlignment="center" />
+
+
+</LinearLayout>

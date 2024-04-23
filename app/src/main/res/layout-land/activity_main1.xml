@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".MainActivity1"
-    android:background="@drawable/loading_background"
+    android:background="@drawable/loading_background_land"
     android:layoutDirection="ltr"
     android:orientation="vertical">
 

@@ -12,7 +12,7 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        val reserveSeatsButton = findViewById<Button>(R.id.reserve_seats)
+        val reserveSeatsButton = findViewById<Button>(R.id.reserve_seats_button)
         reserveSeatsButton.setOnClickListener {
             // Create an instance of the DialogFragment
             val dialogFragment = ReservationDialogFragment()
@@ -21,7 +21,7 @@ class MainActivity2 : AppCompatActivity() {
             dialogFragment.show(supportFragmentManager, "ReservationDialogFragment")
         }
 
-        val aboutUsButton = findViewById<Button>(R.id.about_us)
+        val aboutUsButton = findViewById<Button>(R.id.our_view_button)
         aboutUsButton.setOnClickListener {
             // Start the AboutUs activity
             startActivity(Intent(this, AboutUs::class.java))
