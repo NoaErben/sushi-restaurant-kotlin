@@ -74,7 +74,6 @@
     <string name="date_label">Date:</string>
     <string name="ok_button_label">OK</string>
     <string name="none">None</string>
-    <string name="about_us">About us</string>
     <string name="our_vision_label">Our Vision ...</string>
     <string name="vision_description">At Sakura, we believe in the enriching power of food, offering diverse Asian flavors for a journey of taste and discovery.</string>
     <string name="stay_in_touch">stay in touch</string>
@@ -85,6 +84,9 @@
     <string name="subscribe_switch">Subscribe to our Newsletter</string>
     <string name="subscribe_yes">Subscribe: Yes</string>
     <string name="subscribe_no">Subscribe: No</string>
+    <string name="allergies_question">I have allergies</string>
+    <string name="allergies_description">What is your allergy?</string>
+    <string name="allergies_label">Allergies: </string>
 
 
     <string-array name="num_people_array">

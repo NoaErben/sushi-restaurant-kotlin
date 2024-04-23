@@ -87,6 +87,9 @@
     <string name="subscribe_switch">הירשמו לניוזלטר שלנו</string>
     <string name="subscribe_yes">רישום: פעיל</string>
     <string name="subscribe_no">רישום: לא פעיל</string>
+    <string name="allergies_question">יש לי אלרגיות</string>
+    <string name="allergies_description">מהן האלרגיות שלך?</string>
+    <string name="allergies_label">אלרגיות: </string>
 
 
 </resources>

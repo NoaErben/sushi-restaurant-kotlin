@@ -8,6 +8,7 @@
 // widget 1 - DatePicker with OnDateChangedListener
 // widget 2 - Switch with OnCheckedChangeListener
 // widget 3 - SeekBar with setOnSeekBarChangeListener
+// widget 4 - checkBox with setOnCheckedChangeListener
 
 // widget 4 - EditText ? or checkBox
 
@@ -18,6 +19,7 @@ import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Bundle
 import android.os.Handler
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.SeekBar
 import android.widget.Spinner
@@ -25,6 +27,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import android.widget.EditText
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.DatePicker
 import android.widget.RadioButton
 import android.widget.TextView
@@ -84,13 +87,23 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
             .setView(view)
         val alertDialog = alertDialogBuilder.create()
 
+        // Handle allergy CheckBox click
+        val allergyCheckbox = view.findViewById<CheckBox>(R.id.allergy_checkbox)
+        val allergyDescription = view.findViewById<EditText>(R.id.allergy_description)
+
+        allergyCheckbox.setOnCheckedChangeListener { _, isChecked ->
+            // Show or hide the allergy description EditText based on checkbox state
+            allergyDescription.visibility = if (isChecked) View.VISIBLE else View.GONE
+        }
+
+
         // Handle submit button click
         view.findViewById<Button>(R.id.submit_button)?.setOnClickListener {
             // Retrieve data from views
             val fullName = view.findViewById<EditText>(R.id.full_name).text.toString()
             val phoneNumber = view.findViewById<EditText>(R.id.phone_number).text.toString()
             val email = view.findViewById<EditText>(R.id.email).text.toString()
-            val numPeople = numPeopleSeekBar.progress.toString()
+            val numPeople = if (numPeopleSeekBar.progress == 0) "1" else numPeopleSeekBar.progress?.toString() ?: "1" // Default to "1" if no number of people is selected
             val selectedHour = hourSpinner.selectedItem?.toString() ?: "12:00" // Default to "12:00" if no hour is selected
             // Set month to be " month+1 because the indexing for months starts from 0"
             val selectedDate = datePicker?.run {
@@ -104,6 +117,7 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
             val paymentCash = view.findViewById<RadioButton>(R.id.cash).isChecked
             val creditCard = view.findViewById<RadioButton>(R.id.credit_card).isChecked
             val buyMe = view.findViewById<RadioButton>(R.id.buyme).isChecked
+            val allergyDescriptionText = allergyDescription.text.toString()
 
             // Save the user's answers
             val veganAnswer = if (veganYes) getString(R.string.yes) else getString(R.string.no)
@@ -123,6 +137,7 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
             val dateLabel = getString(R.string.date_label)
             val veganLabel = getString(R.string.vegan_label)
             val paymentLabel = getString(R.string.payment_label)
+            val allergyLabel = getString(R.string.allergies_label)
 
             val okButtonLabel = getString(R.string.ok_button_label)
 
@@ -143,7 +158,9 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
                         "$selectedHourLabel $selectedHour\n" +
                         "$dateLabel $selectedDate\n" +
                         "$veganLabel $veganAnswer\n" +
-                        "$paymentLabel $paymentMethodAnswer\n"
+                        "$paymentLabel $paymentMethodAnswer\n" +
+                        if (allergyDescriptionText.isNotEmpty()) "$allergyLabel $allergyDescriptionText\n" else ""
+
 
                 AlertDialog.Builder(requireContext())
                     .setTitle(getString(R.string.reservation_deatils_title))
@@ -180,4 +197,6 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
         }
         handler.postDelayed(dateChangedRunnable, 1000) // Delay the message's show time
     }
+
+
 }
