@@ -7,7 +7,7 @@
 
 // widget 1 - DatePicker with OnDateChangedListener
 // widget 2 - Switch with OnCheckedChangeListener
-// widget 3 - SeekBar with SeekBarChangeListener
+// widget 3 - SeekBar with setOnSeekBarChangeListener
 
 // widget 4 - EditText ? or checkBox
 
