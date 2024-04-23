@@ -1,3 +1,7 @@
+/**
+ * This class represents the About Us screen of the application. It displays information about
+ * the restaurant's vision and details, and animations related to it.
+ */
 package com.example.sushirestaurant
 
 import android.content.Intent
@@ -9,7 +13,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 
-class AboutUs : AppCompatActivity()  {
+class OurVision : AppCompatActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.our_vision)
@@ -59,9 +63,7 @@ class AboutUs : AppCompatActivity()  {
         }, 3000)
 
 
-
-
-//        // Use a Handler to start the second animation after a delay
+        // Use a Handler to start the second animation after a delay
         Handler().postDelayed({
             val ladySushiLeftEye = findViewById<ImageView>(R.id.left_eye_lady_sushi)
             ladySushiLeftEye.startAnimation(rotateLeftEye)

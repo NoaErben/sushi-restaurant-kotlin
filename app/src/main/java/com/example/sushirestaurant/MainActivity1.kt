@@ -24,7 +24,7 @@ class MainActivity1 : AppCompatActivity() {
         val nigiri_img = findViewById<ImageView>(R.id.nigiri_icon)
 
         // Load slide animation from XML
-        val slideAnim = AnimationUtils.loadAnimation(applicationContext, R.anim.slide_right)
+        val slideAnim = AnimationUtils.loadAnimation(applicationContext, R.anim.slide_right_splash)
 
         // Start animation on the ImageView
         nigiri_img.startAnimation(slideAnim)

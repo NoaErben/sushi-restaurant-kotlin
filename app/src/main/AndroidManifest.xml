@@ -18,7 +18,7 @@
             android:exported="true" />
 
         <activity
-            android:name=".AboutUs"
+            android:name=".OurVision"
             android:exported="true" />
 
         <activity
