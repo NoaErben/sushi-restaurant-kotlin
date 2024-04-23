@@ -12,7 +12,7 @@ import android.widget.TextView
 class AboutUs : AppCompatActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.about_us)
+        setContentView(R.layout.our_vision)
 
         // Load animation objects for each animation
         val fadeIn = AnimationUtils.loadAnimation(applicationContext, R.anim.fade_in)
