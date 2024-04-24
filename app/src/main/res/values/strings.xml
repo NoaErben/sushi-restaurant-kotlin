@@ -62,7 +62,7 @@
     <string name="submit">Submit</string>
     <string name="reservation_title">Reservation</string>
     <string name="error">Error</string>
-    <string name="error_message">Please fill out all required fields.</string>
+    <string name="error_message">Please fill correctly all required fields.</string>
     <string name="reservation_deatils_title">Reservation Details</string>
     <string name="full_name_label">Full name:</string>
     <string name="phone_number_label">Phone Number:</string>
@@ -87,7 +87,9 @@
     <string name="allergies_question">I have allergies</string>
     <string name="allergies_description">What is your allergy?</string>
     <string name="allergies_label">Allergies: </string>
-    <string name="phone_number_error_message">invalid phone</string>
+    <string name="phone_number_error_message">invalid phone number</string>
+    <string name="mail_error_message">invalid mail address</string>
+    <string name="name_error_message">invalid name</string>
 
 
     <string-array name="num_people_array">

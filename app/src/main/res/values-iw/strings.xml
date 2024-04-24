@@ -67,7 +67,7 @@
     <string name="submit">אישור</string>
     <string name="reservation_title">הזמנת שולחן</string>
     <string name="error">שגיאה</string>
-    <string name="error_message">מלא בבקשה את כל פרטי החובה</string>
+    <string name="error_message">מלא בבקשה את כל פרטי החובה באופן תקין</string>
     <string name="reservation_deatils_title">פרטי ההזמנה</string>
     <string name="full_name_label">שם מלא:</string>
     <string name="phone_number_label">מספר טלפון:</string>
@@ -91,6 +91,8 @@
     <string name="allergies_description">מהן האלרגיות שלך?</string>
     <string name="allergies_label">אלרגיות: </string>
     <string name="phone_number_error_message">מספר טלפון לא תקין</string>
+    <string name="mail_error_message">כתובת מייל לא תקינה</string>
+    <string name="name_error_message">שם לא תקין</string>
 
 
 </resources>

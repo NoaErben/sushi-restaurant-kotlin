@@ -11,7 +11,13 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <!--    name-->
+
+    <LinearLayout
+        android:id="@+id/name_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <EditText
             android:id="@+id/full_name"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -20,13 +26,25 @@
             android:layout_marginHorizontal="20dp"
             android:hint="@string/full_name"
             android:textSize="16sp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:id="@+id/full_name_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_dark"
+            android:text="@string/name_error_message"
+            android:visibility="gone"
             android:layout_marginBottom="5dp"
-            />
+            android:layout_gravity="center"
+            android:textAlignment="center" />
+
+    </LinearLayout>
 
         <LinearLayout
             android:id="@+id/phone_number_container"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <!--    phone number-->
@@ -46,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_red_dark"
-                android:text="Invalid phone number"
+                android:text="@string/phone_number_error_message"
                 android:visibility="gone"
                 android:layout_marginBottom="5dp"
                 android:layout_gravity="center"
@@ -56,8 +74,12 @@
         </LinearLayout>
 
 
+    <LinearLayout
+        android:id="@+id/mail_container"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
 
-        <!--    phone number-->
         <EditText
             android:id="@+id/email"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -67,6 +89,19 @@
             android:hint="@string/your_email"
             android:textSize="16sp"
             android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/mail_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_dark"
+            android:text="@string/mail_error_message"
+            android:visibility="gone"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"
+            android:textAlignment="center" />
+
+    </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

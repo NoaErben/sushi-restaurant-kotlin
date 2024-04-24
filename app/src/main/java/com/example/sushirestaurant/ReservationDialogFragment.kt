@@ -96,6 +96,28 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
             allergyDescription.visibility = if (isChecked) View.VISIBLE else View.GONE
         }
 
+        val nameEditText = view.findViewById<EditText>(R.id.full_name)
+        val nameErrorTextView = view.findViewById<TextView>(R.id.full_name_error)
+
+        // Set onFocusChangeListener to full name EditText
+        nameEditText.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                // Validate name when focus leaves the EditText
+                val name = nameEditText.text.toString()
+
+                // Validate name
+                val validName = validateName(name)
+
+                if (!validName) {
+                    // Display error message if name is invalid
+                    nameErrorTextView.visibility = View.VISIBLE
+                } else {
+                    // Hide error message if name is valid
+                    nameErrorTextView.visibility = View.GONE
+                }
+            }
+        }
+
         // Find the EditText and TextView for phone number
         val phoneNumberEditText = view.findViewById<EditText>(R.id.phone_number)
         val phoneNumberErrorTextView = view.findViewById<TextView>(R.id.phone_number_error)
@@ -112,13 +134,38 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
                 if (!validPhoneNumber) {
                     // Display error message if phone number is invalid
                     phoneNumberErrorTextView.visibility = View.VISIBLE
-                    phoneNumberErrorTextView.text = getString(R.string.phone_number_error_message)
                 } else {
                     // Hide error message if phone number is valid
                     phoneNumberErrorTextView.visibility = View.GONE
                 }
             }
         }
+
+
+        val mailEditText = view.findViewById<EditText>(R.id.email)
+        val mailErrorTextView = view.findViewById<TextView>(R.id.mail_error)
+
+        // Set onFocusChangeListener to mail EditText
+        mailEditText.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                // Validate mail when focus leaves the EditText
+                val mail = mailEditText.text.toString()
+
+                // Validate mail
+                val validMail = validateMail(mail)
+
+                if (!validMail) {
+                    // Display error message if mail is invalid
+                    mailErrorTextView.visibility = View.VISIBLE
+                } else {
+                    // Hide error message if mail is valid
+                    mailErrorTextView.visibility = View.GONE
+                }
+            }
+        }
+
+
+
 
         // Handle submit button click
         view.findViewById<Button>(R.id.submit_button)?.setOnClickListener {
@@ -165,7 +212,8 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
             val okButtonLabel = getString(R.string.ok_button_label)
 
             if (fullName.isEmpty() || phoneNumber.isEmpty() || email.isEmpty() || (!veganYes && !veganNo)
-                || (!paymentCash && !creditCard && !buyMe)) {
+                || (!paymentCash && !creditCard && !buyMe || !validateMail(mailEditText.text.toString())
+                        || !validatePhoneNumber(phoneNumberEditText.text.toString()) || !validateName(nameEditText.text.toString()))) {
                 // Display error message if any required field is empty
                 AlertDialog.Builder(requireContext())
                     .setTitle((getString(R.string.error)))
@@ -208,6 +256,9 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
         return alertDialog
     }
 
+
+
+
     override fun onDateChanged(view: DatePicker?, year: Int, monthOfYear: Int, dayOfMonth: Int) {
         // Format the selected date
         selectedDate = String.format("%02d/%02d/%d", dayOfMonth, monthOfYear + 1, year)
@@ -221,9 +272,37 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
         handler.postDelayed(dateChangedRunnable, 1000) // Delay the message's show time
     }
 
+    // Function to validate name format
+    private fun validateName(name: String): Boolean {
+        // Length Check: Minimum 2 characters, maximum 50 characters
+        val lengthRegex = "^.{2,50}$".toRegex()
+
+        // Character Set Check: Letters, spaces, hyphens, and apostrophes
+        val characterSetRegex = "^[a-zA-Z\\s'-]+$".toRegex()
+
+        // Regular Expression Check: Alphabetical characters with optional spaces and certain special characters
+        val regexCheck = "^[a-zA-Z]+(?:[' -][a-zA-Z]+)*$".toRegex()
+
+        // Perform validation using regular expressions
+        val isLengthValid = lengthRegex.matches(name)
+        val isCharacterSetValid = characterSetRegex.matches(name)
+        val isRegexValid = regexCheck.matches(name)
+
+        // Return true if all conditions are met
+        return isLengthValid && isCharacterSetValid && isRegexValid
+    }
+
+
     // Function to validate phone number format
     private fun validatePhoneNumber(phoneNumber: String): Boolean {
         val pattern = "\\d{10}".toRegex() // Regular expression to match 10 digits
         return pattern.matches(phoneNumber)
     }
+
+    // Function to validate email format
+    private fun validateMail(mail: String): Boolean {
+        val pattern = "[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}".toRegex()
+        return pattern.matches(mail)
+    }
+
 }
