@@ -96,12 +96,35 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
             allergyDescription.visibility = if (isChecked) View.VISIBLE else View.GONE
         }
 
+        // Find the EditText and TextView for phone number
+        val phoneNumberEditText = view.findViewById<EditText>(R.id.phone_number)
+        val phoneNumberErrorTextView = view.findViewById<TextView>(R.id.phone_number_error)
+
+        // Set onFocusChangeListener to phone number EditText
+        phoneNumberEditText.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                // Validate phone number when focus leaves the EditText
+                val phoneNumber = phoneNumberEditText.text.toString()
+
+                // Validate phone number
+                val validPhoneNumber = validatePhoneNumber(phoneNumber)
+
+                if (!validPhoneNumber) {
+                    // Display error message if phone number is invalid
+                    phoneNumberErrorTextView.visibility = View.VISIBLE
+                    phoneNumberErrorTextView.text = getString(R.string.phone_number_error_message)
+                } else {
+                    // Hide error message if phone number is valid
+                    phoneNumberErrorTextView.visibility = View.GONE
+                }
+            }
+        }
 
         // Handle submit button click
         view.findViewById<Button>(R.id.submit_button)?.setOnClickListener {
             // Retrieve data from views
             val fullName = view.findViewById<EditText>(R.id.full_name).text.toString()
-            val phoneNumber = view.findViewById<EditText>(R.id.phone_number).text.toString()
+            val phoneNumber = phoneNumberEditText.text.toString()
             val email = view.findViewById<EditText>(R.id.email).text.toString()
             val numPeople = if (numPeopleSeekBar.progress == 0) "1" else numPeopleSeekBar.progress?.toString() ?: "1" // Default to "1" if no number of people is selected
             val selectedHour = hourSpinner.selectedItem?.toString() ?: "12:00" // Default to "12:00" if no hour is selected
@@ -198,5 +221,9 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
         handler.postDelayed(dateChangedRunnable, 1000) // Delay the message's show time
     }
 
-
+    // Function to validate phone number format
+    private fun validatePhoneNumber(phoneNumber: String): Boolean {
+        val pattern = "\\d{10}".toRegex() // Regular expression to match 10 digits
+        return pattern.matches(phoneNumber)
+    }
 }

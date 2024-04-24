@@ -23,17 +23,39 @@
             android:layout_marginBottom="5dp"
             />
 
-        <!--    phone number-->
-        <EditText
-            android:id="@+id/phone_number"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="230dp"
+        <LinearLayout
+            android:id="@+id/phone_number_container"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginHorizontal="20dp"
-            android:hint="@string/your_phone_number"
-            android:textSize="16sp"
-            android:layout_marginBottom="5dp"
-            android:inputType="number"/>
+            android:orientation="horizontal">
+
+            <!--    phone number-->
+            <EditText
+                android:id="@+id/phone_number"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="230dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="20dp"
+                android:hint="@string/your_phone_number"
+                android:textSize="16sp"
+                android:layout_marginBottom="5dp"
+                android:inputType="number"/>
+
+            <TextView
+                android:id="@+id/phone_number_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:text="Invalid phone number"
+                android:visibility="gone"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:textAlignment="center" />
+
+
+        </LinearLayout>
+
+
 
         <!--    phone number-->
         <EditText

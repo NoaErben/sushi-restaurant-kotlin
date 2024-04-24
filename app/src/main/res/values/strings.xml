@@ -87,6 +87,7 @@
     <string name="allergies_question">I have allergies</string>
     <string name="allergies_description">What is your allergy?</string>
     <string name="allergies_label">Allergies: </string>
+    <string name="phone_number_error_message">invalid phone</string>
 
 
     <string-array name="num_people_array">

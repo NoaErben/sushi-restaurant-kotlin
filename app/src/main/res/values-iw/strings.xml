@@ -90,6 +90,7 @@
     <string name="allergies_question">יש לי אלרגיות</string>
     <string name="allergies_description">מהן האלרגיות שלך?</string>
     <string name="allergies_label">אלרגיות: </string>
+    <string name="phone_number_error_message">מספר טלפון לא תקין</string>
 
 
 </resources>
