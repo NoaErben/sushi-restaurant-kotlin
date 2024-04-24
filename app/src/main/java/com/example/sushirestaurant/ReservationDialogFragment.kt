@@ -170,9 +170,9 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
         // Handle submit button click
         view.findViewById<Button>(R.id.submit_button)?.setOnClickListener {
             // Retrieve data from views
-            val fullName = view.findViewById<EditText>(R.id.full_name).text.toString()
+            val fullName = nameEditText.text.toString()
             val phoneNumber = phoneNumberEditText.text.toString()
-            val email = view.findViewById<EditText>(R.id.email).text.toString()
+            val email = mailEditText.text.toString()
             val numPeople = if (numPeopleSeekBar.progress == 0) "1" else numPeopleSeekBar.progress?.toString() ?: "1" // Default to "1" if no number of people is selected
             val selectedHour = hourSpinner.selectedItem?.toString() ?: "12:00" // Default to "12:00" if no hour is selected
             // Set month to be " month+1 because the indexing for months starts from 0"

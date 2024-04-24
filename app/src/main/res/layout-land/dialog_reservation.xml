@@ -1,6 +1,330 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_scroll_view"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/name_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginEnd="5dp">
+
+            <EditText
+                android:id="@+id/full_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="230dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="20dp"
+                android:hint="@string/full_name"
+                android:textSize="16sp"
+                android:layout_marginBottom="5dp" />
+
+            <TextView
+                android:id="@+id/full_name_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:text="@string/name_error_message"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/phone_number_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--    phone number-->
+            <EditText
+                android:id="@+id/phone_number"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="230dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="20dp"
+                android:hint="@string/your_phone_number"
+                android:textSize="16sp"
+                android:layout_marginBottom="5dp"
+                android:inputType="number"/>
+
+            <TextView
+                android:id="@+id/phone_number_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:text="@string/phone_number_error_message"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_marginEnd="15dp"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/mail_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="230dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="20dp"
+                android:hint="@string/your_email"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/mail_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:text="@string/mail_error_message"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_marginEnd="15dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/num_people_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/how_many_people"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/num_people_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <SeekBar
+            android:id="@+id/num_people_seek_bar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="30dp"
+            android:max="15"
+            />
+
+        <!--    date picker selection -->
+        <TextView
+            android:id="@+id/date_picker_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/pick_a_date"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <DatePicker
+            android:id="@+id/date_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+
+        <!--    hour drop-down selection-->
+        <TextView
+            android:id="@+id/hour"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/arrival_hour"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/hours_spinner"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!--  vegen check -->
+        <TextView
+            android:id="@+id/vegan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/vegan"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton android:id="@+id/vegan_yes_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yes"
+                android:layout_marginEnd="10dp"/>
+
+            <RadioButton android:id="@+id/vegan_no_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                android:layout_marginStart="10dp"/>
+
+        </RadioGroup>
+
+        <!--  allergy check -->
+        <CheckBox
+            android:id="@+id/allergy_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/allergies_question"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/allergy_description"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:hint="@string/allergies_description"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone"
+            />
+
+
+        <!--  payment method -->
+        <TextView
+            android:id="@+id/payment"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/payment_method"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton android:id="@+id/cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cash"
+                android:layout_marginEnd="10dp"/>
+
+            <RadioButton android:id="@+id/credit_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/credit_card"
+                android:layout_marginStart="10dp"/>
+
+            <RadioButton android:id="@+id/buyme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buyme"
+                android:layout_marginStart="10dp"/>
+
+        </RadioGroup>
+
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/subscribe_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subscribe_switch"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            tools:ignore="UseSwitchCompatOrMaterialXml"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+
+
+
+        <!--        submit and cancel buttons-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:textSize="16sp"
+                android:layout_margin="20dp"
+                android:backgroundTint="@color/red"/>
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/submit"
+                android:layout_margin="20dp"
+                android:textSize="16sp"
+                android:backgroundTint="@color/green"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
