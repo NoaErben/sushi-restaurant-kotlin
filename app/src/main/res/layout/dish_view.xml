@@ -24,7 +24,8 @@
         android:textSize="16sp"
         android:layout_marginTop="4dp"
         android:textStyle="bold"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:lines="2"/>
 
     <TextView
         android:id="@+id/price"

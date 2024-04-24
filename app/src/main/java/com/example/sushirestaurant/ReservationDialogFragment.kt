@@ -5,13 +5,6 @@
  * and displays reservation details in an alert dialog before navigating back to the main activity.
  */
 
-// widget 1 - DatePicker with OnDateChangedListener
-// widget 2 - Switch with OnCheckedChangeListener
-// widget 3 - SeekBar with setOnSeekBarChangeListener
-// widget 4 - checkBox with setOnCheckedChangeListener
-
-// widget 4 - EditText ? or checkBox
-
 package com.example.sushirestaurant
 
 import android.app.Dialog
@@ -35,24 +28,24 @@ import android.widget.Toast
 import androidx.appcompat.widget.SwitchCompat
 
 class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedListener {
-
+    // Variables to store selected date and handler for delayed message
     private var selectedDate: String? = null
     private var handler: Handler = Handler()
     private var dateChangedRunnable: Runnable = Runnable { }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        // Inflate the layout for this fragment
         val inflater = requireActivity().layoutInflater
         val view = inflater.inflate(R.layout.dialog_reservation, null)
 
-        // Initialize subscribeSwitch and set its OnCheckedChangeListener
+        // Initialize the subscribe switch and set its OnCheckedChangeListener
         val subscribeSwitch: SwitchCompat = view.findViewById(R.id.subscribe_switch)
         subscribeSwitch.setOnCheckedChangeListener { _, isChecked ->
             val toastMessage = if (isChecked) getString(R.string.subscribe_yes) else getString(R.string.subscribe_no)
             Toast.makeText(requireContext(), toastMessage, Toast.LENGTH_SHORT).show()
         }
 
-
-        // Initialize spinner for selecting the hour
+        // Initialize the spinner for selecting the hour
         val hourSpinner: Spinner = view.findViewById(R.id.hours_spinner)
         ArrayAdapter.createFromResource(
             requireContext(),
@@ -63,11 +56,11 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
             hourSpinner.adapter = adapter
         }
 
-        // Initialize DatePicker and set listener
+        // Initialize the DatePicker and set its listener
         val datePicker = view.findViewById<DatePicker>(R.id.date_picker)
         datePicker.init(datePicker.year, datePicker.month, datePicker.dayOfMonth, this)
 
-        // Initialize SeekBar and TextView for selecting the number of people
+        // Initialize the SeekBar and TextView for selecting the number of people
         val numPeopleSeekBar= view.findViewById<SeekBar>(R.id.num_people_seek_bar)
         val numPeopleTextView: TextView = view.findViewById(R.id.num_people_text_view)
 
@@ -81,13 +74,13 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
 
-        // Build AlertDialog
+        // Build the AlertDialog
         val alertDialogBuilder = AlertDialog.Builder(requireContext())
             .setTitle(getString(R.string.reservation_title))
             .setView(view)
         val alertDialog = alertDialogBuilder.create()
 
-        // Handle allergy CheckBox click
+        // Handle the allergy CheckBox click
         val allergyCheckbox = view.findViewById<CheckBox>(R.id.allergy_checkbox)
         val allergyDescription = view.findViewById<EditText>(R.id.allergy_description)
 
@@ -96,10 +89,10 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
             allergyDescription.visibility = if (isChecked) View.VISIBLE else View.GONE
         }
 
+        // Set onFocusChangeListener to the full name EditText
         val nameEditText = view.findViewById<EditText>(R.id.full_name)
         val nameErrorTextView = view.findViewById<TextView>(R.id.full_name_error)
 
-        // Set onFocusChangeListener to full name EditText
         nameEditText.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
                 // Validate name when focus leaves the EditText
@@ -118,11 +111,10 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
             }
         }
 
-        // Find the EditText and TextView for phone number
+        // Set onFocusChangeListener to the phone number EditText
         val phoneNumberEditText = view.findViewById<EditText>(R.id.phone_number)
         val phoneNumberErrorTextView = view.findViewById<TextView>(R.id.phone_number_error)
 
-        // Set onFocusChangeListener to phone number EditText
         phoneNumberEditText.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
                 // Validate phone number when focus leaves the EditText
@@ -141,31 +133,27 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
             }
         }
 
-
+        // Set onFocusChangeListener to the email EditText
         val mailEditText = view.findViewById<EditText>(R.id.email)
         val mailErrorTextView = view.findViewById<TextView>(R.id.mail_error)
 
-        // Set onFocusChangeListener to mail EditText
         mailEditText.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
-                // Validate mail when focus leaves the EditText
+                // Validate email when focus leaves the EditText
                 val mail = mailEditText.text.toString()
 
-                // Validate mail
+                // Validate email
                 val validMail = validateMail(mail)
 
                 if (!validMail) {
-                    // Display error message if mail is invalid
+                    // Display error message if email is invalid
                     mailErrorTextView.visibility = View.VISIBLE
                 } else {
-                    // Hide error message if mail is valid
+                    // Hide error message if email is valid
                     mailErrorTextView.visibility = View.GONE
                 }
             }
         }
-
-
-
 
         // Handle submit button click
         view.findViewById<Button>(R.id.submit_button)?.setOnClickListener {
@@ -232,7 +220,6 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
                         "$paymentLabel $paymentMethodAnswer\n" +
                         if (allergyDescriptionText.isNotEmpty()) "$allergyLabel $allergyDescriptionText\n" else ""
 
-
                 AlertDialog.Builder(requireContext())
                     .setTitle(getString(R.string.reservation_deatils_title))
                     .setMessage(message)
@@ -255,9 +242,6 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
         alertDialog.show()
         return alertDialog
     }
-
-
-
 
     override fun onDateChanged(view: DatePicker?, year: Int, monthOfYear: Int, dayOfMonth: Int) {
         // Format the selected date
@@ -292,7 +276,6 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
         return isLengthValid && isCharacterSetValid && isRegexValid
     }
 
-
     // Function to validate phone number format
     private fun validatePhoneNumber(phoneNumber: String): Boolean {
         val pattern = "\\d{10}".toRegex() // Regular expression to match 10 digits
@@ -304,5 +287,4 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
         val pattern = "[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}".toRegex()
         return pattern.matches(mail)
     }
-
 }
