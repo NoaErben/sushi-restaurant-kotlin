@@ -90,6 +90,24 @@
     <string name="phone_number_error_message">invalid phone number</string>
     <string name="mail_error_message">invalid mail address</string>
     <string name="name_error_message">invalid name</string>
+    <string name="chicken_gyoza_description">Butter seared dumplings, stuffed with chicken, leek, ginger, spring onion and sesame oil</string>
+    <string name="chicken_gyoza_label">Chicken Gyoza</string>
+    <string name="soba_salad_description">Soba Noodles, tofu, avocado, celery, cucumber, spring onion, coriander, seasme, in chili vinaigrette</string>
+    <string name="soba_salad_label">Soba Salad</string>
+    <string name="lime_tuna_description">Slices of lime with red tuna, avocado, cucumber, and ponzu sauce</string>
+    <string name="lime_tuna_label">Lime Tuna Roll</string>
+    <string name="salmon_misu_glaze_description">Succulent Atlantic salmon glazed with honey, soy sauce, ginger, avocado, served on jasmine rice</string>
+    <string name="salmon_misu_glaze_label">Salmon Misu Glaze</string>
+    <string name="filipino_halo_halo_description">Colorful and layered dessert consisting of shaved ice, sweetened beans, jellies, fruits, and leche flan, topped with evaporated milk and ice cream</string>
+    <string name="filipino_halo_halo_label">Filipino Halo Halo</string>
+    <string name="vietnamese_banh_flan_description">Creamy vanilla custard infused with caramel, served with a luscious caramel sauce drizzle</string>
+    <string name="vietnamese_banh_flan_label">Vietnamese Banh Flan</string>
+    <string name="mai_tai_description">A tropical blend of premium aged rum, lime juice, orange liqueur, and orgeat syrup, garnished with pineapple</string>
+    <string name="mai_tai_label">Mai Tai</string>
+    <string name="yuzu_sour_description">Japanese whiskey, yuzu juice, simple syrup, served with a twist of fresh yuzu peel</string>
+    <string name="yuzu_sour_label">Yuzu Sour</string>
+    <string name="fanta_label_text">Fanta</string>
+    <string name="cola_zero_label_text">Cola Zero</string>
 
 
     <string-array name="num_people_array">

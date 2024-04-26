@@ -173,6 +173,30 @@
                     app:labelText="@string/agedashi_tofu_label"
                     app:price="52₪" />
 
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/chicken_gyoza"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/chicken_gyoza_description"
+                    app:imageSrc="@drawable/chicken_gyoza"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/chicken_gyoza_label"
+                    app:price="49₪" />
+
+
+                    <com.example.sushirestaurant.DishView
+                        android:id="@+id/soba_salad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:descriptionText="@string/soba_salad_description"
+                        app:imageSrc="@drawable/soba_salad"
+                        app:labelColor="@color/black"
+                        app:labelText="@string/soba_salad_label"
+                        app:price="49₪" />
+
+
+
+
             </LinearLayout>
         </HorizontalScrollView>
 
@@ -246,6 +270,27 @@
                     app:labelColor="@color/black"
                     app:labelText="@string/sechuan_beef_label"
                     app:price = "71₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/lime_tuna"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/lime_tuna_description"
+                    app:imageSrc="@drawable/lime_tuna"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/lime_tuna_label"
+                    app:price = "65₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/salmon_misu_glaze"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/salmon_misu_glaze_description"
+                    app:imageSrc="@drawable/salmon_misu_glaze"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/salmon_misu_glaze_label"
+                    app:price = "90₪" />
+
             </LinearLayout>
         </HorizontalScrollView>
 
@@ -321,6 +366,29 @@
                     app:labelColor="@color/black"
                     app:labelText="@string/fruit_pancakes_label"
                     app:price = "38₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/filipino_halo_halo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/filipino_halo_halo_description"
+                    app:imageSrc="@drawable/filipino_halo_halo"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/filipino_halo_halo_label"
+                    app:price = "43₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/vietnamese_banh_flan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/vietnamese_banh_flan_description"
+                    app:imageSrc="@drawable/vietnamese_banh_flan"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/vietnamese_banh_flan_label"
+                    app:price = "47₪" />
+
+
+
             </LinearLayout>
         </HorizontalScrollView>
 
@@ -376,14 +444,14 @@
                     app:price = "48₪" />
 
                 <com.example.sushirestaurant.DishView
-                    android:id="@+id/sakura_sunset"
+                    android:id="@+id/mai_tai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:descriptionText="@string/sakura_sunset_description"
-                    app:imageSrc="@drawable/sakura_sunset"
+                    app:descriptionText="@string/mai_tai_description"
+                    app:imageSrc="@drawable/mai_tai"
                     app:labelColor="@color/black"
-                    app:labelText="@string/sakura_sunset_label"
-                    app:price = "52₪" />
+                    app:labelText="@string/mai_tai_label"
+                    app:price = "55₪" />
 
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/shochu_flower"
@@ -394,6 +462,28 @@
                     app:labelColor="@color/black"
                     app:labelText="@string/shochu_flower_label"
                     app:price = "54₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/sakura_sunset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/sakura_sunset_description"
+                    app:imageSrc="@drawable/sakura_sunset"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/sakura_sunset_label"
+                    app:price = "52₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/yuzu_sour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/yuzu_sour_description"
+                    app:imageSrc="@drawable/yuzu_sour"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/yuzu_sour_label"
+                    app:price = "49₪" />
+
+
             </LinearLayout>
         </HorizontalScrollView>
 
@@ -447,6 +537,15 @@
                     app:price = "12₪" />
 
                 <com.example.sushirestaurant.DishView
+                    android:id="@+id/fanta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:imageSrc="@drawable/fanta"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/fanta_label_text"
+                    app:price = "13₪" />
+
+                <com.example.sushirestaurant.DishView
                     android:id="@+id/mineral_water"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -463,6 +562,16 @@
                     app:labelColor="@color/black"
                     app:labelText="@string/fuze_tea_label_text"
                     app:price = "13₪" />
+
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/cola_zero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:imageSrc="@drawable/cola_zero"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/cola_zero_label_text"
+                    app:price = "13₪" />
+
             </LinearLayout>
         </HorizontalScrollView>
 

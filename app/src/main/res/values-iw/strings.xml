@@ -93,6 +93,23 @@
     <string name="phone_number_error_message">מספר טלפון לא תקין</string>
     <string name="mail_error_message">כתובת מייל לא תקינה</string>
     <string name="name_error_message">שם לא תקין</string>
+    <string name="chicken_gyoza_description">כיסוני בצק צרובים בחמאה, במילוי עוף, כרישה, ג׳ינג׳ר, בצל ירוק ושמן שומשום</string>
+    <string name="chicken_gyoza_label">גיוזה עוף</string>
+    <string name="soba_salad_description">אטריות סובה, טופו, אבוקדו, סלרי, מלפפון, בצל ירוק, כוסברה, שומשום, ויניגרט  צ׳ילי</string>
+    <string name="soba_salad_label">סלט אטריות סובה</string>
+    <string name="lime_tuna_description">טונה אדומה, מלפפון ואבוקדו במעטפת טונה ופלחי לימון</string>
+    <string name="lime_tuna_label">ליים טונה רול</string>
+    <string name="salmon_misu_glaze_description">נתחי סלמון בגלייז מיסו ודבש, סויה, אבוקדו. מוגש לצד אורז יסמין</string>
+    <string name="salmon_misu_glaze_label">סלמון מיסו גלייז</string>
+    <string name="filipino_halo_halo_description">קינוח צבעוני המורכב משכבות של מקרח כתוש, עדשים, ג׳לי, פירות ופלאן לצ׳ה, מעוטר בחלב מרוכז וגלידה</string>
+    <string name="filipino_halo_halo_label">פיליפינו הלו הלו</string>
+    <string name="vietnamese_banh_flan_description">קסטרד וניל וקרמל, מוגש עם רוטב קרמל מפנק</string>
+    <string name="vietnamese_banh_flan_label">פלאן וניל ויאטנמי</string>
+    <string name="mai_tai_description">מיקס טרופי של רום מיושן, מיץ ליים, ליקר תפוזים וסירופ אורגאט, מגושם עם אננס</string>    <string name="mai_tai_label">מאי טאי</string>
+    <string name="yuzu_sour_description">וויסקי יפני, מיץ יוזו, מי סוכר, מוגש עם קליפת יוזו טרי</string>
+    <string name="yuzu_sour_label">יוזו סאוור</string>
+    <string name="fanta_label_text">פאנטה</string>
+    <string name="cola_zero_label_text">קולה זירו</string>
 
 
 </resources>
