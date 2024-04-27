@@ -1,5 +1,5 @@
 /**
- * This class represents the About Us screen of the application. It displays information about
+ * This class represents the Our Vision screen of the application. It displays information about
  * the restaurant's vision and details, and animations related to it.
  */
 package com.example.sushirestaurant
@@ -28,11 +28,11 @@ class OurVision : AppCompatActivity()  {
         val rotateRightEye = AnimationUtils.loadAnimation(applicationContext, R.anim.rotate)
 
 
-        // Set the back home button
+        // Set the back button
         val aboutUsButton = findViewById<Button>(R.id.back_button)
         aboutUsButton.setOnClickListener {
-            // Start the AboutUs activity
-            startActivity(Intent(this, MainActivity2::class.java))
+            // Start the OurVision activity
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
 

@@ -225,8 +225,8 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
                     .setMessage(message)
                     .setPositiveButton(okButtonLabel) { dialog, _ ->
                         dialog.dismiss()
-                        // Navigate back to MainActivity2
-                        val intent = Intent(requireContext(), MainActivity2::class.java)
+                        // Navigate back to MainActivity
+                        val intent = Intent(requireContext(), MainActivity::class.java)
                         startActivity(intent)
                     }
                     .show()

@@ -1,5 +1,5 @@
 /**
- * This class represents the second activity of the application.
+ * This class represents the main activity of the application.
  * It displays options for the user to observe the menu, reserve seats or view information about the restaurant.
  */
 
@@ -11,7 +11,7 @@ import android.view.animation.AnimationUtils
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity2 : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

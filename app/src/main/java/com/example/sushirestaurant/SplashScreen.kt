@@ -1,6 +1,6 @@
 /**
  * This class represents the splash screen of the application. It displays a nigiri with animation
- * that reveals the restaurant's name, then navigates to MainActivity2 after a short delay.
+ * that reveals the restaurant's name, then navigates to MainActivity after a short delay.
  */
 
 package com.example.sushirestaurant
@@ -12,7 +12,7 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity1 : AppCompatActivity() {
+class SplashScreen : AppCompatActivity() {
     // Handler for delaying the navigation
     private val handler = Handler()
 
@@ -29,9 +29,9 @@ class MainActivity1 : AppCompatActivity() {
         // Start animation on the ImageView
         nigiri_img.startAnimation(slideAnim)
 
-        // Delayed navigation to MainActivity2
+        // Delayed navigation to MainActivity
         handler.postDelayed({
-            val intent = Intent(this@MainActivity1, MainActivity2::class.java)
+            val intent = Intent(this@SplashScreen, MainActivity::class.java)
             startActivity(intent)
             finish()
         }, 2350)
