@@ -261,11 +261,11 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
         // Length Check: Minimum 2 characters, maximum 50 characters
         val lengthRegex = "^.{2,50}$".toRegex()
 
-        // Character Set Check: Letters, spaces, hyphens, and apostrophes
-        val characterSetRegex = "^[a-zA-Z\\s'-]+$".toRegex()
+        // Character Set Check: Letters, spaces, hyphens, and apostrophes, including Hebrew characters
+        val characterSetRegex = "^[a-zA-Z\\s'\\-א-ת]+$".toRegex()
 
-        // Regular Expression Check: Alphabetical characters with optional spaces and certain special characters
-        val regexCheck = "^[a-zA-Z]+(?:[' -][a-zA-Z]+)*$".toRegex()
+        // Regular Expression Check: Alphabetical characters with optional spaces, hyphens, and apostrophes, including Hebrew characters
+        val regexCheck = "^[a-zA-Zא-ת]+(?:['\\-\\s][a-zA-Zא-ת]+)*$".toRegex()
 
         // Perform validation using regular expressions
         val isLengthValid = lengthRegex.matches(name)
@@ -276,6 +276,7 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
         return isLengthValid && isCharacterSetValid && isRegexValid
     }
 
+
     // Function to validate phone number format
     private fun validatePhoneNumber(phoneNumber: String): Boolean {
         val pattern = "\\d{10}".toRegex() // Regular expression to match 10 digits
@@ -284,7 +285,7 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
 
     // Function to validate email format
     private fun validateMail(mail: String): Boolean {
-        val pattern = "[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}".toRegex()
+        val pattern = "[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.com".toRegex()
         return pattern.matches(mail)
     }
 }
