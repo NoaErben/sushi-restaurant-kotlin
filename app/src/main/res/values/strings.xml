@@ -87,9 +87,9 @@
     <string name="allergies_question">I have allergies</string>
     <string name="allergies_description">What is your allergy?</string>
     <string name="allergies_label">Allergies: </string>
-    <string name="phone_number_error_message">invalid phone number</string>
-    <string name="mail_error_message">invalid mail address</string>
-    <string name="name_error_message">invalid name</string>
+    <string name="phone_number_error_message">*invalid phone number</string>
+    <string name="mail_error_message">*invalid mail address</string>
+    <string name="name_error_message">*invalid name</string>
     <string name="chicken_gyoza_description">Butter seared dumplings, stuffed with chicken, leek, ginger, spring onion and sesame oil</string>
     <string name="chicken_gyoza_label">Chicken Gyoza</string>
     <string name="soba_salad_description">Soba Noodles, tofu, avocado, celery, cucumber, spring onion, coriander, seasme, in chili vinaigrette</string>

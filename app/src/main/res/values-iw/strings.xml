@@ -90,9 +90,9 @@
     <string name="allergies_question">יש לי אלרגיות</string>
     <string name="allergies_description">מהן האלרגיות שלך?</string>
     <string name="allergies_label">אלרגיות: </string>
-    <string name="phone_number_error_message">מספר טלפון לא תקין</string>
-    <string name="mail_error_message">כתובת מייל לא תקינה</string>
-    <string name="name_error_message">שם לא תקין</string>
+    <string name="phone_number_error_message">*מספר טלפון לא תקין</string>
+    <string name="mail_error_message">*כתובת מייל לא תקינה</string>
+    <string name="name_error_message">*שם לא תקין</string>
     <string name="chicken_gyoza_description">כיסוני בצק צרובים בחמאה, במילוי עוף, כרישה, ג׳ינג׳ר, בצל ירוק ושמן שומשום</string>
     <string name="chicken_gyoza_label">גיוזה עוף</string>
     <string name="soba_salad_description">אטריות סובה, טופו, אבוקדו, סלרי, מלפפון, בצל ירוק, כוסברה, שומשום, ויניגרט  צ׳ילי</string>
