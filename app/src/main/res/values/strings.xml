@@ -108,6 +108,7 @@
     <string name="yuzu_sour_label">Yuzu Sour</string>
     <string name="fanta_label_text">Fanta</string>
     <string name="cola_zero_label_text">Cola Zero</string>
+    <string name="past_date_message">Invalid date</string>
 
 
     <string-array name="num_people_array">

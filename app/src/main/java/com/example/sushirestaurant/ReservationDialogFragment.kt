@@ -244,6 +244,21 @@ class ReservationDialogFragment : DialogFragment(), DatePicker.OnDateChangedList
     }
 
     override fun onDateChanged(view: DatePicker?, year: Int, monthOfYear: Int, dayOfMonth: Int) {
+        // Get the current calendar instance
+        val currentDate = Calendar.getInstance()
+
+        // Create a calendar instance for the selected date
+        val selectedDateCalendar = Calendar.getInstance()
+        selectedDateCalendar.set(year, monthOfYear, dayOfMonth)
+
+        // Check if the selected date is before the current date
+        if (selectedDateCalendar.before(currentDate)) {
+            // Reset the date picker to the current date
+            view?.updateDate(currentDate.get(Calendar.YEAR), currentDate.get(Calendar.MONTH), currentDate.get(Calendar.DAY_OF_MONTH))
+            // Show a toast message indicating that past dates are not allowed
+            Toast.makeText(requireContext(), getString(R.string.past_date_message), Toast.LENGTH_SHORT).show()
+        }
+
         // Format the selected date
         selectedDate = String.format("%02d/%02d/%d", dayOfMonth, monthOfYear + 1, year)
         // Remove any existing callbacks to avoid multiple executions

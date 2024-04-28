@@ -110,6 +110,7 @@
     <string name="yuzu_sour_label">יוזו סאוור</string>
     <string name="fanta_label_text">פאנטה</string>
     <string name="cola_zero_label_text">קולה זירו</string>
+    <string name="past_date_message">תאריך לא תקין</string>
 
 
 </resources>
