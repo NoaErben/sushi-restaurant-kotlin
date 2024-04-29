@@ -14,13 +14,11 @@
         android:orientation="horizontal"
         android:layout_marginTop="7dp">
 
-
         <Space
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="15" />
 
-        <!--        back button-->
         <Button
             android:id="@+id/back_button"
             android:layout_width="60dp"
@@ -37,8 +35,6 @@
 
     </LinearLayout>
 
-
-    <!-- Vision Section -->
     <LinearLayout
         android:id="@+id/vision_container"
         android:layout_width="match_parent"
@@ -46,7 +42,6 @@
         android:orientation="vertical"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="30dp">
-
 
         <TextView
             android:id="@+id/vision_label"
@@ -71,7 +66,6 @@
             android:layout_marginBottom="20dp"/>
     </LinearLayout>
 
-    <!-- Stay in Touch Section -->
     <LinearLayout
         android:id="@+id/stay_in_touch_container"
         android:layout_width="match_parent"
@@ -102,14 +96,12 @@
             android:gravity="center"
             android:layout_marginTop="10dp" />
 
-
     </LinearLayout>
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
-
 
     <LinearLayout
         android:id="@+id/stars_container"
@@ -149,10 +141,6 @@
 
     </LinearLayout>
 
-
-
-
-
     <LinearLayout
         android:id="@+id/lady"
         android:layout_width="wrap_content"
@@ -160,14 +148,11 @@
         android:orientation="horizontal"
         android:layout_gravity="center_horizontal">
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layoutDirection="ltr">
 
-
-            <!-- Lady Sushi -->
             <ImageView
                 android:id="@+id/lady_sushi"
                 android:layout_width="328dp"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="true">מסעדת סושי</string>
+    <string name="app_name" translatable="true">סאקורה</string>
     <string name="welcome_to_sakura_asian_and_sushi_bar">ברוכים הבאים לסאקורה - מסעדת סושי אסיאתית</string>
     <string name="reserve_seats">הזמינו שולחן</string>
     <string name="starters">ראשונות</string>

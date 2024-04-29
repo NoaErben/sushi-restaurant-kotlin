@@ -1,3 +1,8 @@
+/**
+ * This class represents a custom view for displaying information about a dish in a restaurant menu.
+ * It includes an image, a label, a description, and a price. Clicking on the view opens a dialog
+ * showing detailed information about the dish.
+ */
 package com.example.sushirestaurant
 
 import android.app.Dialog
@@ -109,6 +114,5 @@ class DishView @JvmOverloads constructor(
 
         dialog.show()
     }
-
 
 }

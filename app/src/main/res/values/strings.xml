@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="true">SushiRestaurant</string>
+    <string name="app_name" translatable="true">Sakura</string>
     <string name="welcome_to_sakura_asian_and_sushi_bar">Welcome to Sakura- Asian restaurant and Sushi bar</string>
     <string name="reserve_seats">Reserve seats</string>
     <string name="starters">Starters</string>

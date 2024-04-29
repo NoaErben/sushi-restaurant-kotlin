@@ -23,15 +23,12 @@
         android:layout_height="wrap_content"
         android:layout_weight="1" />
 
-    <!-- text container -->
     <LinearLayout
         android:id="@+id/vision_container"
         android:layout_width="328dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:orientation="vertical">
-
-
 
         <TextView
             android:id="@+id/vision_label"
@@ -64,8 +61,7 @@
             android:gravity="center"
             android:text="@string/stay_in_touch"
             android:textColor="@color/white"
-            android:textSize="30sp"
-             />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/contact_details"
@@ -76,8 +72,7 @@
             android:gravity="center"
             android:text="@string/contact_details"
             android:textColor="@color/white"
-            android:textSize="20sp"
-             />
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -86,8 +81,6 @@
         android:layout_height="wrap_content"
         android:layout_weight="1" />
 
-
-    <!-- image container -->
     <LinearLayout
         android:id="@+id/image_container"
         android:layout_width="wrap_content"
@@ -95,8 +88,6 @@
         android:orientation="vertical"
         android:layout_gravity="center_vertical">
 
-
-        <!-- stars container -->
         <LinearLayout
             android:id="@+id/stars_container"
             android:layout_width="match_parent"
@@ -145,8 +136,6 @@
                 android:layout_height="wrap_content"
                 android:layoutDirection="ltr">
 
-
-                <!-- Lady Sushi -->
                 <ImageView
                     android:id="@+id/lady_sushi"
                     android:layout_width="328dp"

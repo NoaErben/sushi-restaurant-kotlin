@@ -25,7 +25,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-<!--        button that links to Our view page -->
         <Button
             android:id="@+id/our_view_button"
             android:layout_width="45dp"
@@ -58,7 +57,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.8" />
 
-            <!--        welcome text -->
             <TextView
                 android:id="@+id/welcome_text"
                 android:layout_width="0dp"
@@ -80,10 +78,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.8" />
 
-
         </LinearLayout>
 
-        <!--        reserve seats button-->
+
         <Button
             android:id="@+id/reserve_seats_button"
             android:layout_width="wrap_content"
@@ -98,8 +95,6 @@
             app:layout_constraintStart_toStartOf="@+id/background_image"
             app:layout_constraintWidth_percent=".8" />
 
-
-        <!--    starters-->
         <TextView
             android:id="@+id/starters"
             android:layout_width="wrap_content"
@@ -161,8 +156,6 @@
                     app:labelText="@string/meat_bun_label"
                     app:price = "50₪" />
 
-
-
                 <com.example.sushirestaurant.DishView
                     android:id="@+id/agedashi_tofu"
                     android:layout_width="wrap_content"
@@ -184,23 +177,20 @@
                     app:price="49₪" />
 
 
-                    <com.example.sushirestaurant.DishView
-                        android:id="@+id/soba_salad"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:descriptionText="@string/soba_salad_description"
-                        app:imageSrc="@drawable/soba_salad"
-                        app:labelColor="@color/black"
-                        app:labelText="@string/soba_salad_label"
-                        app:price="49₪" />
-
-
-
+                <com.example.sushirestaurant.DishView
+                    android:id="@+id/soba_salad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:descriptionText="@string/soba_salad_description"
+                    app:imageSrc="@drawable/soba_salad"
+                    app:labelColor="@color/black"
+                    app:labelText="@string/soba_salad_label"
+                    app:price="49₪" />
 
             </LinearLayout>
+
         </HorizontalScrollView>
 
-        <!--    main course-->
         <TextView
             android:id="@+id/main_course"
             android:layout_width="wrap_content"
@@ -294,7 +284,6 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-        <!-- desserts -->
         <TextView
             android:id="@+id/dessert"
             android:layout_width="wrap_content"
@@ -309,9 +298,7 @@
             app:layout_constraintEnd_toEndOf="@+id/hor_scroll_main_course"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/background_image"
-            app:layout_constraintTop_toBottomOf="@+id/hor_scroll_main_course"
-            />
-
+            app:layout_constraintTop_toBottomOf="@+id/hor_scroll_main_course" />
 
         <HorizontalScrollView
             android:id="@+id/hor_scroll_desserts"
@@ -387,12 +374,9 @@
                     app:labelText="@string/vietnamese_banh_flan_label"
                     app:price = "47₪" />
 
-
-
             </LinearLayout>
         </HorizontalScrollView>
 
-        <!-- cocktails -->
         <TextView
             android:id="@+id/cocktail"
             android:layout_width="wrap_content"
@@ -483,11 +467,9 @@
                     app:labelText="@string/yuzu_sour_label"
                     app:price = "49₪" />
 
-
             </LinearLayout>
         </HorizontalScrollView>
 
-        <!-- soft drinks -->
         <TextView
             android:id="@+id/soft_drinks"
             android:layout_width="wrap_content"
@@ -575,6 +557,6 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

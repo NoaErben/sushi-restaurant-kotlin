@@ -43,8 +43,7 @@
             android:layout_marginTop="10dp"
             app:layout_constraintTop_toTopOf="@+id/background_image"
             app:layout_constraintStart_toStartOf="@+id/background_image"
-            app:layout_constraintWidth_percent=".8" />
-
+            app:layout_constraintWidth_percent=".8"/>
 
         <LinearLayout
             android:id="@+id/welcome_text_container"
@@ -61,7 +60,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.9" />
 
-            <!--        welcome text -->
             <TextView
                 android:id="@+id/welcome_text"
                 android:layout_width="0dp"
@@ -80,12 +78,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
-
-
-
         </LinearLayout>
 
-        <!--        reserve seats button-->
         <Button
             android:id="@+id/reserve_seats_button"
             android:layout_width="wrap_content"
@@ -103,8 +97,6 @@
             android:layoutDirection="ltr"
             />
 
-
-        <!--    starters-->
         <TextView
             android:id="@+id/starters"
             android:layout_width="wrap_content"
@@ -201,7 +193,6 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-        <!--    main course-->
         <TextView
             android:id="@+id/main_course"
             android:layout_width="wrap_content"
@@ -292,11 +283,9 @@
                     app:labelText="@string/salmon_misu_glaze_label"
                     app:price = "90₪" />
 
-
             </LinearLayout>
         </HorizontalScrollView>
 
-        <!-- desserts -->
         <TextView
             android:id="@+id/dessert"
             android:layout_width="wrap_content"
@@ -311,9 +300,7 @@
             app:layout_constraintEnd_toEndOf="@+id/hor_scroll_main_course"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/background_image"
-            app:layout_constraintTop_toBottomOf="@+id/hor_scroll_main_course"
-            />
-
+            app:layout_constraintTop_toBottomOf="@+id/hor_scroll_main_course" />
 
         <HorizontalScrollView
             android:id="@+id/hor_scroll_desserts"
@@ -392,7 +379,6 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-        <!-- cocktails -->
         <TextView
             android:id="@+id/cocktail"
             android:layout_width="wrap_content"
@@ -485,7 +471,6 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-        <!-- soft drinks -->
         <TextView
             android:id="@+id/soft_drinks"
             android:layout_width="wrap_content"

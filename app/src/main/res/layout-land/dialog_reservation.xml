@@ -11,7 +11,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
         <LinearLayout
             android:id="@+id/name_container"
             android:layout_width="match_parent"
@@ -47,7 +46,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!--    phone number-->
             <EditText
                 android:id="@+id/phone_number"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -69,9 +67,7 @@
                 android:layout_marginHorizontal="25dp"
                 android:visibility="gone"/>
 
-
         </LinearLayout>
-
 
         <LinearLayout
             android:id="@+id/mail_container"
@@ -127,7 +123,6 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-
         <SeekBar
             android:id="@+id/num_people_seek_bar"
             android:layout_width="230dp"
@@ -138,7 +133,6 @@
             android:max="15"
             />
 
-        <!--    date picker selection -->
         <TextView
             android:id="@+id/date_picker_text"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -150,7 +144,6 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-
         <DatePicker
             android:id="@+id/date_picker"
             android:layout_width="wrap_content"
@@ -160,8 +153,6 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp" />
 
-
-        <!--    hour drop-down selection-->
         <TextView
             android:id="@+id/hour"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -180,7 +171,6 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"/>
 
-        <!--  vegen check -->
         <TextView
             android:id="@+id/vegan"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -213,7 +203,6 @@
 
         </RadioGroup>
 
-        <!--  allergy check -->
         <CheckBox
             android:id="@+id/allergy_checkbox"
             android:layout_width="wrap_content"
@@ -222,8 +211,7 @@
             android:layout_marginRight="10dp"
             android:text="@string/allergies_question"
             android:textSize="16sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/allergy_description"
@@ -234,11 +222,8 @@
             android:hint="@string/allergies_description"
             android:textSize="16sp"
             android:layout_marginBottom="5dp"
-            android:visibility="gone"
-            />
+            android:visibility="gone" />
 
-
-        <!--  payment method -->
         <TextView
             android:id="@+id/payment"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -278,8 +263,6 @@
 
         </RadioGroup>
 
-
-
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/subscribe_switch"
             android:layout_width="wrap_content"
@@ -291,10 +274,6 @@
             android:textSize="16sp"
             android:textStyle="bold"/>
 
-
-
-
-        <!--        submit and cancel buttons-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -319,7 +298,7 @@
                 android:textSize="16sp"
                 android:backgroundTint="@color/green"/>
 
-
         </LinearLayout>
     </LinearLayout>
+
 </ScrollView>
